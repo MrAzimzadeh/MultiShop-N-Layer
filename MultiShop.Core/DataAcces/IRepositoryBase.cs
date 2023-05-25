@@ -9,7 +9,6 @@ namespace MultiShop.Core.DataAcces
 {
     // Engin Demirog Polymorphisim 
     public interface IRepositoryBase<TEntity>
-
     {
         void Add(TEntity model);
         void Update(TEntity model);

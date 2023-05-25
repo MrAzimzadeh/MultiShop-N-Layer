@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MultiShop.Core.DataAcces.EntityFramework
 {
-    public class EfRepositoryBase
+    public class EfRepositoryBase 
     {
+
     }
 }
