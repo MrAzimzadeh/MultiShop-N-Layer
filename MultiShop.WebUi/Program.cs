@@ -1,3 +1,5 @@
+using MultiShop.Business.Abstract;
+using MultiShop.Business.Concreate;
 using MultiShop.DataAcces.Abstract;
 using MultiShop.DataAcces.Concrete.EntityFramework;
 
@@ -5,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IProductsServices, ProducManager>();
 
 builder.Services.AddScoped<IProductDal, EfProductDal>();
 
