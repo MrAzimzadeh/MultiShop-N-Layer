@@ -13,10 +13,10 @@ namespace MultiShop.Core.DataAcces
     public interface IRepositoryBase<TEntity> 
     where TEntity : class ,  IEntity 
     {
-        void Add(TEntity model);
-        void Update(TEntity model);
-        void Delete(TEntity model);
+        void Add(TEntity model); // 
+        void Update(TEntity model); //
+        void Delete(TEntity model); // 
         TEntity Get(Expression<Func<TEntity, bool>> filter); //
-        List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter);
+        List<TEntity> GetAll(Expression<Func<TEntity, bool>>? filter = null); // 
     }
 }

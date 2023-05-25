@@ -10,3 +10,10 @@ C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiSho
 C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\obj\Debug\net7.0\refint\MultiShop.Business.dll
 C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\obj\Debug\net7.0\MultiShop.Business.pdb
 C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\obj\Debug\net7.0\ref\MultiShop.Business.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\bin\Debug\net7.0\MultiShop.Core.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\bin\Debug\net7.0\MultiShop.Entities.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\bin\Debug\net7.0\MultiShop.Entities.pdb
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\bin\Debug\net7.0\MultiShop.Core.pdb
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\obj\Debug\net7.0\MultiShop.Business.csproj.CopyComplete
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\bin\Debug\net7.0\MultiShop.DataAcces.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.Business\bin\Debug\net7.0\MultiShop.DataAcces.pdb
