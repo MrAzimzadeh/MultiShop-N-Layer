@@ -4,12 +4,14 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using MultiShop.Core.Entities.Abstract;
 
 namespace MultiShop.Core.DataAcces.EntityFramework
 {
     public class EfRepositoryBase<TEntity, TContext> : IRepositoryBase<TEntity>
-        where TEntity : IEntity, new()
+        where TEntity : class  ,  IEntity
+        where TContext : DbContext , new()
     {
         public void Add(TEntity model)
         {
