@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "MultiShop.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/MultiShop.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MultiShop.Core.dll": {}
+        }
+      },
+      "MultiShop.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "MultiShop.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MultiShop.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MultiShop.Entities.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MultiShop.Core/1.0.0": {
+      "type": "project",
+      "path": "../MultiShop.Core/MultiShop.Core.csproj",
+      "msbuildProject": "../MultiShop.Core/MultiShop.Core.csproj"
+    },
+    "MultiShop.Entities/1.0.0": {
+      "type": "project",
+      "path": "../MultiShop.Entities/MultiShop.Entities.csproj",
+      "msbuildProject": "../MultiShop.Entities/MultiShop.Entities.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "MultiShop.Core >= 1.0.0",
+      "MultiShop.Entities >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\azimz\\.nuget\\packages\\": {},
@@ -39,7 +77,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Core\\MultiShop.Core.csproj": {
+              "projectPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Core\\MultiShop.Core.csproj"
+            },
+            "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Entities\\MultiShop.Entities.csproj": {
+              "projectPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Entities\\MultiShop.Entities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

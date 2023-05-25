@@ -1,0 +1,17 @@
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.csproj.AssemblyReference.cache
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.AssemblyInfoInputs.cache
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.AssemblyInfo.cs
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.csproj.CoreCompileInputs.cache
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\bin\Debug\net7.0\MultiShop.DataAcces.deps.json
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\bin\Debug\net7.0\MultiShop.DataAcces.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\bin\Debug\net7.0\MultiShop.DataAcces.pdb
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\bin\Debug\net7.0\MultiShop.Core.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\bin\Debug\net7.0\MultiShop.Entities.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\bin\Debug\net7.0\MultiShop.Core.pdb
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\bin\Debug\net7.0\MultiShop.Entities.pdb
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.csproj.CopyComplete
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\refint\MultiShop.DataAcces.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.pdb
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\ref\MultiShop.DataAcces.dll

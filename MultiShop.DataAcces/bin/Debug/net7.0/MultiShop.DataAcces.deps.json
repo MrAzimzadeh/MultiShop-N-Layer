@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "MultiShop.DataAcces/1.0.0": {
+        "dependencies": {
+          "MultiShop.Core": "1.0.0",
+          "MultiShop.Entities": "1.0.0"
+        },
+        "runtime": {
+          "MultiShop.DataAcces.dll": {}
+        }
+      },
+      "MultiShop.Core/1.0.0": {
+        "runtime": {
+          "MultiShop.Core.dll": {}
+        }
+      },
+      "MultiShop.Entities/1.0.0": {
+        "dependencies": {
+          "MultiShop.Core": "1.0.0"
+        },
+        "runtime": {
+          "MultiShop.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MultiShop.DataAcces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MultiShop.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MultiShop.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
