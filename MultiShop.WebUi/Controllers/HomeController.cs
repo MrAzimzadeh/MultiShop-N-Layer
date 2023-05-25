@@ -1,21 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MultiShop.WebUi.Models;
 using System.Diagnostics;
+using MultiShop.Business.Abstract;
 
 namespace MultiShop.WebUi.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IProductsServices _productServices;
+        public HomeController(ILogger<HomeController> logger, IProductsServices productServices)
         {
             _logger = logger;
+            _productServices = productServices;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var products = _productServices.GetProducts();
+            return View(products);
         }
 
         public IActionResult Privacy()

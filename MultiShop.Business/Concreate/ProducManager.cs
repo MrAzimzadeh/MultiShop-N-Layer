@@ -23,5 +23,11 @@ namespace MultiShop.Business.Concreate
         {
             return _productDal.GetAll();
         }
+
+        public Product GetProductById(int id)
+        {
+            var product = _productDal.Get(x => x.Id == id);
+            return product;
+        }
     }
 }
