@@ -2,6 +2,7 @@
 using MultiShop.WebUi.Models;
 using System.Diagnostics;
 using MultiShop.Business.Abstract;
+using MultiShop.Entities.Concreate;
 
 namespace MultiShop.WebUi.Controllers
 {
@@ -17,6 +18,13 @@ namespace MultiShop.WebUi.Controllers
 
         public IActionResult Index()
         {
+            Product product = new()
+            {
+                Name = "Mac",
+                Description = "sa"
+            };
+
+            _productServices.Add(product);
             var products = _productServices.GetProducts();
             return View(products);
         }

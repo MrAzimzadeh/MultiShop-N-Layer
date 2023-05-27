@@ -15,3 +15,5 @@ C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiSho
 C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\refint\MultiShop.DataAcces.dll
 C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.pdb
 C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\ref\MultiShop.DataAcces.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\bin\Debug\net7.0\MultiShop.DataAcces.runtimeconfig.json
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.DataAcces\obj\Debug\net7.0\MultiShop.DataAcces.genruntimeconfig.cache

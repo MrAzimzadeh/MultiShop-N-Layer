@@ -10,6 +10,7 @@ namespace MultiShop.Business.Abstract
     public interface IProductsServices
     {
 
+        void Add(Product product);
         List<Product> GetProducts();
         Product GetProductById(int id);
 

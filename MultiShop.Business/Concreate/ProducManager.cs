@@ -20,6 +20,11 @@ namespace MultiShop.Business.Concreate
         }
 
         // bu method bize butun productlari getirir 
+        public void Add(Product product)
+        {
+            _productDal.Add(product);
+        }
+
         public List<Product> GetProducts()
         {
             return _productDal.GetAll();
