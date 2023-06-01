@@ -1246,6 +1246,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "MongoDB.Driver.Core >= 2.19.2",
       "MultiShop.Core >= 1.0.0"
     ]
   },
@@ -1297,6 +1298,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "MongoDB.Driver.Core": {
+            "target": "Package",
+            "version": "[2.19.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

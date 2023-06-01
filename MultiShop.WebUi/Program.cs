@@ -1,15 +1,28 @@
+using Microsoft.Extensions.Options;
 using MultiShop.Business.Abstract;
 using MultiShop.Business.Concreate;
+using MultiShop.Core.DataAcces.MongoDB.MongoSettings;
 using MultiShop.DataAcces.Abstract;
 using MultiShop.DataAcces.Concrete.EntityFramework;
+using MultiShop.DataAcces.Concrete.MongoDb;
 
 var builder = WebApplication.CreateBuilder(args);
+//
 
-// Add services to the container.
+// todo Mongo Db ucun JSonun icerisini Odutub Databasessetings icerisine birlesdirdi 
+builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
+
+
 builder.Services.AddControllersWithViews();
+//todo INterface ucun OLAN HISSE HANSI interface hansi KLasla ise dusecek Onu yaziriq 
 builder.Services.AddScoped<IProductsServices, ProducManager>();
-builder.Services.AddScoped<IProductDal, EfProductDal>();
+builder.Services.AddScoped<IProductDal, MProductDal>();
 
+// Gelen Ders 
+builder.Services.AddScoped<IDatabseSettings, DatabaseSettings>(sp =>
+{
+    return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

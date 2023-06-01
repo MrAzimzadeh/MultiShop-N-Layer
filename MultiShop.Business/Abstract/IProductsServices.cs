@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MultiShop.Entities.Concreate;
+using MultiShop.Entities.DTOs;
 
 namespace MultiShop.Business.Abstract
 {
     public interface IProductsServices
     {
 
-        void Add(Product product);
+        void AddProduct(ProductCreateDTO productCreateDto);
         List<Product> GetProducts();
-        Product GetProductById(int id);
+        Product GetProductById(string id);
 
     }
 }

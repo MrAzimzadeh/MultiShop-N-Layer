@@ -8,11 +8,11 @@ using MultiShop.Core.Entities.Abstract;
 
 namespace MultiShop.Core.DataAcces
 {
-    // Engin Demirog Polymorphisim 
-    // 
+    //Engin Demirog Polymorphisim
     public interface IRepositoryBase<TEntity> 
     where TEntity : class ,  IEntity 
     {
+        //
         void Add(TEntity model); // 
         void Update(TEntity model); //
         void Delete(TEntity model); // 

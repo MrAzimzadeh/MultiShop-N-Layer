@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MultiShop.Business.Abstract;
 using MultiShop.DataAcces.Abstract;
 using MultiShop.Entities.Concreate;
+using MultiShop.Entities.DTOs;
 
 namespace MultiShop.Business.Concreate
 {
@@ -16,12 +17,40 @@ namespace MultiShop.Business.Concreate
 
         public ProducManager(IProductDal productDal)
         {
+
             _productDal = productDal;
         }
 
         // bu method bize butun productlari getirir 
-        public void Add(Product product)
+
+        public void AddProduct(ProductCreateDTO productCreateDto)
         {
+            List<ProductLanguage> productLanguages = new();
+            foreach (var pl in productCreateDto.ProductLanguages)
+            {
+                ProductLanguage productLanguage = new()
+                {
+                    Name = pl.Name,
+                    Description = pl.Description,
+                    LangCode = pl.LangCode,
+                    SeoUrl = "",
+                };
+                productLanguages.Add(productLanguage);
+            }
+
+            Product product = new()
+            {
+                ProductLanguages = productLanguages,
+                Price = productCreateDto.Price,
+                Discount = productCreateDto.Discount,
+                DiscountEndDate = productCreateDto.DiscountEndDate,
+                CreatedDate = DateTime.Now,
+                Categories = productCreateDto.Categories,
+                UpdatedDate = DateTime.Now,
+                IsActive = false,
+                IsDeleted = false,
+                PhotoUrl = productCreateDto.PhotoUrl
+            };
             _productDal.Add(product);
         }
 
@@ -30,7 +59,7 @@ namespace MultiShop.Business.Concreate
             return _productDal.GetAll();
         }
 
-        public Product GetProductById(int id)
+        public Product GetProductById(string id)
         {
             var product = _productDal.Get(x => x.Id == id);
             return product;

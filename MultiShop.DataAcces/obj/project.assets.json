@@ -1332,6 +1332,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "MongoDB.Driver.Core": "2.19.2",
           "MultiShop.Core": "1.0.0"
         },
         "compile": {

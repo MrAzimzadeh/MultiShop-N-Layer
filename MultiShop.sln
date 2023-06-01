@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Business", "MultiShop.Business\MultiShop.Business.csproj", "{8B89D668-A70A-45A0-A7DB-84C0CDAA9FF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Business", "MultiShop.Business\MultiShop.Business.csproj", "{8B89D668-A70A-45A0-A7DB-84C0CDAA9FF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.DataAcces", "MultiShop.DataAcces\MultiShop.DataAcces.csproj", "{4FEC8D3E-B1CC-4386-B0B1-0E8441810DAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.DataAcces", "MultiShop.DataAcces\MultiShop.DataAcces.csproj", "{4FEC8D3E-B1CC-4386-B0B1-0E8441810DAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Entities", "MultiShop.Entities\MultiShop.Entities.csproj", "{9634A2DB-9932-47C4-B5C0-66479CC60D36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Entities", "MultiShop.Entities\MultiShop.Entities.csproj", "{9634A2DB-9932-47C4-B5C0-66479CC60D36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Core", "MultiShop.Core\MultiShop.Core.csproj", "{94BEFAAC-DFC6-4746-9284-86ED0DC0C1E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Core", "MultiShop.Core\MultiShop.Core.csproj", "{94BEFAAC-DFC6-4746-9284-86ED0DC0C1E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Testings", "MultiShop.Testings\MultiShop.Testings.csproj", "{866193D2-8A99-41D9-8BA9-C940B888ED16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Testings", "MultiShop.Testings\MultiShop.Testings.csproj", "{866193D2-8A99-41D9-8BA9-C940B888ED16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.WebUi", "MultiShop.WebUi\MultiShop.WebUi.csproj", "{DF0805BE-47DB-4528-8EB0-439BED7BAB49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.WebUi", "MultiShop.WebUi\MultiShop.WebUi.csproj", "{DF0805BE-47DB-4528-8EB0-439BED7BAB49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.WepApi", "MultiShop.WepApi\MultiShop.WepApi.csproj", "{B5D6AF73-944B-412B-AB2E-844B56FE8E06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{DF0805BE-47DB-4528-8EB0-439BED7BAB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF0805BE-47DB-4528-8EB0-439BED7BAB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF0805BE-47DB-4528-8EB0-439BED7BAB49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D6AF73-944B-412B-AB2E-844B56FE8E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D6AF73-944B-412B-AB2E-844B56FE8E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D6AF73-944B-412B-AB2E-844B56FE8E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D6AF73-944B-412B-AB2E-844B56FE8E06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

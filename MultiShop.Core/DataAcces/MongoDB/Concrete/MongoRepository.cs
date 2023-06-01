@@ -28,7 +28,7 @@ namespace MultiShop.Core.DataAcces.MongoDB.Concrete
         }
         public void Add(TDocument model)
         {
-            throw new NotImplementedException();
+
         }
 
         public void Update(TDocument model)
