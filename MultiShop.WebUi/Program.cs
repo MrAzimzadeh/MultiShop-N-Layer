@@ -17,6 +17,10 @@ builder.Services.AddControllersWithViews();
 //todo INterface ucun OLAN HISSE HANSI interface hansi KLasla ise dusecek Onu yaziriq 
 builder.Services.AddScoped<IProductsServices, ProducManager>();
 builder.Services.AddScoped<IProductDal, MProductDal>();
+// Category 
+builder.Services.AddScoped<ICategoryServices, CategoryManager>();
+builder.Services.AddScoped<ICategoryDal, MCategoryDal>();
+
 
 // Gelen Ders 
 builder.Services.AddScoped<IDatabseSettings, DatabaseSettings>(sp =>
@@ -39,6 +43,15 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "areas",
+        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
+
 
 app.MapControllerRoute(
     name: "default",

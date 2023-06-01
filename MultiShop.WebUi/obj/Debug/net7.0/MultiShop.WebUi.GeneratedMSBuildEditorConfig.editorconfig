@@ -16,6 +16,34 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.WebUi
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXENhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXENhdGVnb3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXFNoYXJlZFxFcnJvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -39,6 +67,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXFNoYXJlZFxfQWRtaW5MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-pr62lsock9
 
 [C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
