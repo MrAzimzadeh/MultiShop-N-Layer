@@ -15,5 +15,6 @@ namespace MultiShop.Business.Abstract
         List<Category> GetCategory();
         List<CategoryListDTO> GetCategoryListDto(string lang);
         Category GetCategoryById(string id);
+        void RemoveCategory(string id);
     }
 }

@@ -56,5 +56,12 @@ namespace MultiShop.Business.Concreate
             var product = _categoryDal.Get(id);
             return product;
         }
+
+        public void RemoveCategory(string id)
+        {
+             
+             _categoryDal.Remove(id);
+
+        }
     }
 }
