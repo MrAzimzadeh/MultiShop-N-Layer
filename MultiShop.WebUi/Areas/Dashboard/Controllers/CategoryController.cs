@@ -18,21 +18,22 @@ namespace MultiShop.WebUi.Areas.Dashboard.Controllers
 
         public IActionResult Index()
         {
-            var categories = _categoryServices.GetCategory();
+            var categories = _categoryServices.GetCategoryList("Ru");
             return View(categories);
         }
 
         [HttpGet]
         public IActionResult Create()
         {
+            
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(CategoryCreateDTO categoryDto)
+        public IActionResult Create(CategoryCreateDTO categoryCreateDto)
         {
-            _categoryServices.AddCategory(categoryDto);
-            return RedirectToAction(nameof(Index));
+            _categoryServices.AddCategory(categoryCreateDto);
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
@@ -53,9 +54,17 @@ namespace MultiShop.WebUi.Areas.Dashboard.Controllers
         [HttpGet]
         public IActionResult Edit(string id)
         {
-             var edit =  _categoryServices.GetCategoryById(id);
+             var edit = _categoryServices.GetCategoryById(id);
              return View(edit);
 
+        }
+
+        [HttpPost]
+        public IActionResult Edit(string id,CategoryCreateDTO categoryCreateDto)
+        {
+            _categoryServices.UpdateCategory(id,categoryCreateDto);
+
+            return RedirectToAction("Index");
         }
 
 

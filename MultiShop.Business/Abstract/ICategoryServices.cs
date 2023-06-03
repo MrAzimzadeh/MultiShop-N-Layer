@@ -13,8 +13,9 @@ namespace MultiShop.Business.Abstract
     {
         void AddCategory(CategoryCreateDTO categoryCreateDto);
         List<Category> GetCategory();
-        List<CategoryListDTO> GetCategoryListDto(string lang);
+        List<CategoryListDTO> GetCategoryList(string lang);
         Category GetCategoryById(string id);
+        void UpdateCategory(string id,CategoryCreateDTO updaCategoryDto);
         void RemoveCategory(string id);
     }
 }

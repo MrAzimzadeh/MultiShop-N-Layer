@@ -46,15 +46,51 @@ namespace MultiShop.Business.Concreate
 
         }
 
-        public List<CategoryListDTO> GetCategoryListDto(string lang)
+        public List<CategoryListDTO> GetCategoryList(string lang)
         {
-            return new List<CategoryListDTO>();
+            var categories = _categoryDal.GetAll();
+
+            var result = categories.Select(x=> new CategoryListDTO
+            {
+                Id = x.Id,
+                PhotoUrl = x.PhotoUrl,
+                Name =  x.CategoryLanguages.FirstOrDefault(x=>x.LangCode == lang).Name,
+                SeoUrl = x.CategoryLanguages.FirstOrDefault(x => x.LangCode == lang).SeoUrl,
+                LangCode = x.CategoryLanguages.FirstOrDefault(x => x.LangCode == lang).LangCode,
+                ProductCount = 0
+
+            }).ToList();
+
+            return result;
         }
 
         public Category GetCategoryById(string id)
         {
             var product = _categoryDal.Get(id);
             return product;
+        }
+
+        public void UpdateCategory(string id,CategoryCreateDTO updaCategoryDto)
+        {
+            List<CategoryLanguage> languages = new();
+            foreach (var categoryLang in updaCategoryDto.CategoryLanguages)
+            {
+                CategoryLanguage language = new()
+                {
+                    LangCode = categoryLang.LangCode,
+                    Name = categoryLang.Name,
+                    SeoUrl = "lggjk"
+                };
+                languages.Add(language);
+            }
+            Category category = new()
+            {
+                PhotoUrl = updaCategoryDto.PhotoUrl,
+                CategoryLanguages = languages,
+            };
+
+
+            _categoryDal.Update(id, category);
         }
 
         public void RemoveCategory(string id)

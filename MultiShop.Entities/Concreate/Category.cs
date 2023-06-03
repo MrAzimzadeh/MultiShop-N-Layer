@@ -10,7 +10,7 @@ using MultiShop.Core.Entities.Abstract;
 
 namespace MultiShop.Entities.Concreate
 {
-    [BsonCollection("Category")]
+    [BsonCollection("category")]
     public class Category :  IEntity
     {
         [BsonId] //  id Ler MongoDb de String Formatinda olur 

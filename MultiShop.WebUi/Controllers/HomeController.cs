@@ -4,6 +4,7 @@ using System.Diagnostics;
 using MultiShop.Business.Abstract;
 using MultiShop.Entities.Concreate;
 using MultiShop.Entities.DTOs;
+using MultiShop.Entities.ViewModels;
 
 namespace MultiShop.WebUi.Controllers
 {
@@ -11,17 +12,23 @@ namespace MultiShop.WebUi.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IProductsServices _productServices;
-        public HomeController(ILogger<HomeController> logger, IProductsServices productServices)
+        private readonly  ICategoryServices _categoryServices;
+        public HomeController(ILogger<HomeController> logger, IProductsServices productServices, ICategoryServices categoryServices)
         {
             _logger = logger;
             _productServices = productServices;
+            _categoryServices = categoryServices;
         }
 
         public IActionResult Index()
         {
+            var categories = _categoryServices.GetCategoryList("Az");
 
-           
-            return View();
+            HomeVM vm = new()
+            {
+                CategoryList = categories
+            };
+            return View(vm);
         }
 
 

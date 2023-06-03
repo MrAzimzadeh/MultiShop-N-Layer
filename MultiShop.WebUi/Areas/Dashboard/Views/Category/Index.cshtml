@@ -1,1 +1,15 @@
-﻿
+﻿@model List<CategoryListDTO>
+
+<a asp-area="Dashboard" asp-controller="Category" asp-action="Create">Create</a>
+    
+    <br/>
+@foreach (var category in Model)
+{
+    <div class="card">
+        <p>@category.Name</p>
+        <p>@category.ProductCount</p>
+        <p><img width="150" height="150" src="@category.PhotoUrl" /></p>
+        <p><a href="/dashboard/category/edit/@category.Id">Edit</a></p>
+    </div>
+
+}

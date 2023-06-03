@@ -1,16 +1,35 @@
 ﻿@model CategoryCreateDTO
+
+
 <div class="container form-group">
     <form method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-lg-12">
                 <div class="form-group">
-                    <input asp-for="PhotoUrl" class="form-control" type="text" />
+                    <span>Title ( Aze )</span>
+                    <input asp-for="CategoryLanguages[0].Name" class="form-control" type="text"/>
+                    <input type="hidden" asp-for="CategoryLanguages[0].LangCode" value="Az" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <span>Title ( Ru )</span>
+                    <input asp-for="CategoryLanguages[1].Name" class="form-control" type="text"/>
+                    <input type="hidden" asp-for="CategoryLanguages[1].LangCode" value="Ru" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <span>Title ( Eng )</span>
+                    <input asp-for="CategoryLanguages[2].Name" class="form-control" type="text"/>
+                    <input type="hidden" asp-for="CategoryLanguages[2].LangCode" value="En" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <span>Photo</span>
+                    <input asp-for="PhotoUrl" class="form-control" type="text"/>
                 </div>
             </div>
 
             <div class="col-lg-12">
                 <div class="form-group">
-                    <input class="btn btn-primary" placeholder="Submit" value="Create" type="submit" />
+                    <input class="btn btn-primary" placeholder="Submit" value="Create" type="submit"/>
                 </div>
             </div>
         </div>

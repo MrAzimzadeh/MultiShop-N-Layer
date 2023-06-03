@@ -8,6 +8,7 @@ namespace MultiShop.Entities.DTOs.Category
 {
     public class CategoryListDTO
     {
+        public string Id { get; set; }
         public string PhotoUrl { get; set; }
         public string Name { get; set; }
         public string SeoUrl { get; set; }
