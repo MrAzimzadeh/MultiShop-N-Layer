@@ -64,13 +64,50 @@ namespace MultiShop.Business.Concreate
             return result;
         }
 
-        public Category GetCategoryById(string id)
+        public CategoryCreateDTO GetCategoryById(string id)
         {
-            var product = _categoryDal.Get(id);
-            return product;
+            var category = _categoryDal.Get(id);
+
+            CategoryCreateDTO categoryCreateDto = new()
+            {
+                PhotoUrl = category.PhotoUrl,
+                CategoryLanguages = category.CategoryLanguages
+            };
+            
+            return categoryCreateDto;
         }
 
-        public void UpdateCategory(string id,CategoryCreateDTO updaCategoryDto)
+        public CategoryUpdateDTO GetUpdatedCategoryById(string id)
+        {
+            var category = _categoryDal.Get(id);
+
+            CategoryUpdateDTO categoryCreateDto = new()
+            {
+                Id = id,
+                PhotoUrl = category.PhotoUrl,
+                CategoryLanguages = category.CategoryLanguages
+            };
+
+            return categoryCreateDto;
+        }
+
+        public CategoryRemove GetRemoveCategoryById(string id)
+        {
+            var category = _categoryDal.Get(id);
+
+
+            CategoryRemove categoryCreateDto = new()
+            {
+                Id = id ,
+                PhotoUrl = category.PhotoUrl,
+                CategoryLanguages = category.CategoryLanguages,
+                
+            };
+
+            return categoryCreateDto;
+        }
+
+        public void UpdateCategory(string id,CategoryUpdateDTO updaCategoryDto)
         {
             List<CategoryLanguage> languages = new();
             foreach (var categoryLang in updaCategoryDto.CategoryLanguages)
@@ -85,6 +122,7 @@ namespace MultiShop.Business.Concreate
             }
             Category category = new()
             {
+                Id = id,
                 PhotoUrl = updaCategoryDto.PhotoUrl,
                 CategoryLanguages = languages,
             };
@@ -97,6 +135,31 @@ namespace MultiShop.Business.Concreate
         {
              
              _categoryDal.Remove(id);
+
+        }
+
+        public CategoryDetailDTO GetDetailById(string id)
+        {
+            var detail = _categoryDal.Get(id);
+            List<CategoryLanguage> languages = new();
+            foreach (var categoryLang in detail.CategoryLanguages)
+            {
+                CategoryLanguage language = new()
+                {
+                    LangCode = categoryLang.LangCode,
+                    Name = categoryLang.Name,
+                    SeoUrl = "lggjk"
+                };
+                languages.Add(language);
+            }
+            CategoryDetailDTO category = new()
+            {
+                Id = id,
+                PhotoUrl = detail.PhotoUrl,
+                CategoryLanguages = languages,
+            };
+
+            return category;
 
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MultiShop.Business.Abstract;
 using MultiShop.DataAcces.Abstract;
 using MultiShop.Entities.Concreate;
-using MultiShop.Entities.DTOs;
+using MultiShop.Entities.DTOs.ProductDTOs;
 
 namespace MultiShop.Business.Concreate
 {

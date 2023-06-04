@@ -39,8 +39,7 @@ namespace MultiShop.WebUi.Areas.Dashboard.Controllers
         [HttpGet]
         public IActionResult Delete(string id)
         {
-            var delete = _categoryServices.GetCategoryById(id);
-
+            var delete = _categoryServices.GetRemoveCategoryById(id);
             return View(delete);
         }
 
@@ -54,17 +53,24 @@ namespace MultiShop.WebUi.Areas.Dashboard.Controllers
         [HttpGet]
         public IActionResult Edit(string id)
         {
-             var edit = _categoryServices.GetCategoryById(id);
+             var edit = _categoryServices.GetUpdatedCategoryById(id);
              return View(edit);
 
         }
 
         [HttpPost]
-        public IActionResult Edit(string id,CategoryCreateDTO categoryCreateDto)
+        public IActionResult Edit(string Id, CategoryUpdateDTO categoryCreateDto)
         {
-            _categoryServices.UpdateCategory(id,categoryCreateDto);
+            _categoryServices.UpdateCategory(Id,categoryCreateDto);
 
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult  Detail(string id)
+        {
+           var detail =   _categoryServices.GetDetailById(id);
+            return View(detail);
         }
 
 

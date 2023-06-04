@@ -1,0 +1,19 @@
+﻿@model CategoryDetailDTO
+<a href="/dashboard/category" class="btn btn-primary m-1 w-100">Geri</a>
+<hr/>
+<div class="row g-3">
+    <div class="col">
+        <img src="@Model.PhotoUrl" class="img-fluid" width="100" height="100"/>
+    </div>
+    <div class="col">
+        @foreach (var item in Model.CategoryLanguages)
+        {
+            <div class="align-items-center">
+                <h6>@item.LangCode : </h6>
+            </div>
+            <input type="text" readonly="readonly" class="form-control" placeholder="@item.Name" aria-label="@item.Name">
+
+        }
+    </div>
+</div>
+

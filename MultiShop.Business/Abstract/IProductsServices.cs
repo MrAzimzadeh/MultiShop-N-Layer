@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MultiShop.Entities.Concreate;
-using MultiShop.Entities.DTOs;
+using MultiShop.Entities.DTOs.ProductDTOs;
 
 namespace MultiShop.Business.Abstract
 {

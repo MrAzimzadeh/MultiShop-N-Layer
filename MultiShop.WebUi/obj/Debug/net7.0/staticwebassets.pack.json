@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MultiShop.WebUi.bundle.scp.css",
-      "PackagePath": "staticwebassets\\MultiShop.WebUi.bundle.scp.css"
+      "Id": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MultiShop.WebUI.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MultiShop.WebUI.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Admin\\css\\sb-admin-2.css",
@@ -8009,20 +8009,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MultiShop.WebUi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MultiShop.WebUI.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.MultiShop.WebUi.props",
-      "PackagePath": "build\\MultiShop.WebUi.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.MultiShop.WebUI.props",
+      "PackagePath": "build\\MultiShop.WebUI.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.MultiShop.WebUi.props",
-      "PackagePath": "buildMultiTargeting\\MultiShop.WebUi.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.MultiShop.WebUI.props",
+      "PackagePath": "buildMultiTargeting\\MultiShop.WebUI.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.MultiShop.WebUi.props",
-      "PackagePath": "buildTransitive\\MultiShop.WebUi.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.MultiShop.WebUI.props",
+      "PackagePath": "buildTransitive\\MultiShop.WebUI.props"
     }
   ],
   "ElementsToRemove": []

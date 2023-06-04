@@ -7,8 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = MultiShop.WebUi
-build_property.RootNamespace = MultiShop.WebUi
+build_property.RootNamespace = MultiShop.WebUI
+build_property.RootNamespace = MultiShop.WebUI
 build_property.ProjectDir = C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.WebUi\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
@@ -24,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXENhdGVnb3J5XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Category/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXENhdGVnb3J5XERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXENhdGVnb3J5XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXFByb2R1Y3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Shared/Error.cshtml]
@@ -78,8 +86,8 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Areas/Dashboard/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXFNoYXJlZFxfQWRtaW5MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-pr62lsock9
+build_metadata.AdditionalFiles.CssScope = b-td0ipwl9wp
 
 [C:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-9ns4ect1ps
+build_metadata.AdditionalFiles.CssScope = b-xjv9lwat38

@@ -1,15 +1,75 @@
-﻿@model List<CategoryListDTO>
+﻿@model IEnumerable<CategoryListDTO>
+<div class="container-fluid">
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">
+                <a href="/dashboard/Category/create">Create</a>
+            </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>#Id</th>
+                            <th>
+                                Photo
+                            </th>
 
-<a asp-area="Dashboard" asp-controller="Category" asp-action="Create">Create</a>
-    
-    <br/>
-@foreach (var category in Model)
-{
-    <div class="card">
-        <p>@category.Name</p>
-        <p>@category.ProductCount</p>
-        <p><img width="150" height="150" src="@category.PhotoUrl" /></p>
-        <p><a href="/dashboard/category/edit/@category.Id">Edit</a></p>
+                            <th>#Lang</th>
+
+                            <th>Title</th>
+                            <th>Count </th>
+                            <th>
+                                Parametr
+                            </th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>#Id</th>
+                            <th>
+                                Photo
+                            </th>
+                            <th>#Lang</th>
+                            <th>Title</th>
+                            <th>Count</th>
+                            <th>
+                                Parametr
+                            </th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @* *@
+                        @foreach (var category in Model)
+                        {
+                            <tr>
+                                <th>@category.Id</th>
+                                <th>
+                                    <img width="100" class="img-fluid" src="@category.PhotoUrl" />
+                                </th>
+                                <th>(@category.LangCode)</th>
+                                <th>
+                                    @category.Name
+                                </th>
+                                <th>
+                                    @* @(article. ? "Active" : "De Aktive"); *@
+                                </th>
+                                <th class="d-flex">
+                                    <a href="/dashboard/Category/Detail/@category.Id" class="btn btn-secondary">
+                                        Deteil
+                                    </a>
+                                    <a href="/dashboard/Category/Delete/@category.Id" class="btn btn-danger w-50">
+                                        Delete
+                                    </a>
+                                    <a href="/dashboard/Category/Edit/@category.Id" class="btn btn-primary w-50">Update</a>
+                                </th>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-
-}
+</div>

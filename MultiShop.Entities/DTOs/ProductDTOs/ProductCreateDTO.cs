@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MultiShop.Entities.DTOs
+namespace MultiShop.Entities.DTOs.ProductDTOs
 {
     public class ProductCreateDTO
     {

@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Core", "MultiShop
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Testings", "MultiShop.Testings\MultiShop.Testings.csproj", "{866193D2-8A99-41D9-8BA9-C940B888ED16}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.WebUi", "MultiShop.WebUi\MultiShop.WebUi.csproj", "{DF0805BE-47DB-4528-8EB0-439BED7BAB49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.WebUI", "MultiShop.WebUi\MultiShop.WebUI.csproj", "{DF0805BE-47DB-4528-8EB0-439BED7BAB49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.WepApi", "MultiShop.WepApi\MultiShop.WepApi.csproj", "{B5D6AF73-944B-412B-AB2E-844B56FE8E06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.WepApi", "MultiShop.WepApi\MultiShop.WepApi.csproj", "{B5D6AF73-944B-412B-AB2E-844B56FE8E06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
