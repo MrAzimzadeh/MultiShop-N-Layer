@@ -1,5 +1,7 @@
+using AutoMapper;
 using Microsoft.Extensions.Options;
 using MultiShop.Business.Abstract;
+using MultiShop.Business.AutoMapper;
 using MultiShop.Business.Concreate;
 using MultiShop.Core.DataAcces.MongoDB.MongoSettings;
 using MultiShop.DataAcces.Abstract;
@@ -27,6 +29,17 @@ builder.Services.AddScoped<IDatabseSettings, DatabaseSettings>(sp =>
 {
     return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
 });
+
+
+var mapperConfig = new MapperConfiguration(mc =>
+{
+    mc.AddProfile(new MappingProfile());
+});
+
+IMapper mapper = mapperConfig.CreateMapper();
+builder.Services.AddSingleton(mapper);
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

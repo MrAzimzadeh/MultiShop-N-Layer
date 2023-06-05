@@ -15,5 +15,8 @@ namespace MultiShop.Business.Abstract
         List<Product> GetProducts();
         Product GetProductById(string id);
 
+
+
+
     }
 }

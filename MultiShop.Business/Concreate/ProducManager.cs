@@ -64,5 +64,7 @@ namespace MultiShop.Business.Concreate
             var product = _productDal.Get(id);
             return product;
         }
+
+    
     }
 }

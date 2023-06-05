@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MultiShop.Entities.DTOs.Category;
+using MultiShop.Entities.DTOs.ProductDTOs;
 
 namespace MultiShop.Business.Abstract
 {
@@ -21,6 +22,6 @@ namespace MultiShop.Business.Abstract
         void RemoveCategory(string id);
         // Detail 
         CategoryDetailDTO GetDetailById(string id);
-
+        List<ProductCategoryDTO> GetProductCategory();
     }
 }

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gDFRTlZ6lh3d98FnI+faN2pIcH+eeZrHpdfPaNqyDVyoez5zEVkr47u120fwRsKKd4eN4qJtcNkceziZtqdQrQ==",
+  "dgSpecHash": "ZhLWJrECDlYEeagK10HfoY0IAd3kI7xTgOmo1Uu742HRn6YMgIc8ULm7wb3DZArfl3W2ajICCvxcUW+rgCv6gw==",
   "success": true,
   "projectFilePath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\MultiShop.WebUI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\azimz\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\azimz\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

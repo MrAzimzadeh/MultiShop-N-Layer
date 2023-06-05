@@ -1,22 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using MultiShop.Business.Abstract;
 using MultiShop.DataAcces.Abstract;
 using MultiShop.DataAcces.Concrete.MongoDb;
 using MultiShop.Entities.Concreate;
 using MultiShop.Entities.DTOs.Category;
+using MultiShop.Entities.DTOs.ProductDTOs;
 
 namespace MultiShop.Business.Concreate
 {
     public class CategoryManager : ICategoryServices
     {
         private readonly ICategoryDal _categoryDal;
-        public CategoryManager(ICategoryDal categoryDal)
+        private  readonly  IMapper _mapper;
+        public CategoryManager(ICategoryDal categoryDal, IMapper mapper)
         {
             _categoryDal = categoryDal;
+            _mapper = mapper;
         }
 
         public void AddCategory(CategoryCreateDTO categoryCreateDto)
@@ -161,6 +166,13 @@ namespace MultiShop.Business.Concreate
 
             return category;
 
+        }
+
+        public List<ProductCategoryDTO> GetProductCategory()
+        {
+            var categories = _categoryDal.GetProductCategories();
+            var cat =_mapper.Map<List<ProductCategoryDTO>>(categories);
+            return cat;
         }
     }
 }
