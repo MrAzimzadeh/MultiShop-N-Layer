@@ -14,7 +14,6 @@ var builder = WebApplication.CreateBuilder(args);
 // todo Mongo Db ucun JSonun icerisini Odutub Databasessetings icerisine birlesdirdi 
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
 
-
 builder.Services.AddControllersWithViews();
 //todo INterface ucun OLAN HISSE HANSI interface hansi KLasla ise dusecek Onu yaziriq 
 builder.Services.AddScoped<IProductsServices, ProducManager>();

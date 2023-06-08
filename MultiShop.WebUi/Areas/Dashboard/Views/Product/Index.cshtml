@@ -4,7 +4,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">
-                <a href="/dashboard/Category/create">Create</a>
+                <a href="/dashboard/Product/create">Create</a>
             </h6>
         </div>
         <div class="card-body">
@@ -42,28 +42,33 @@
                     </tfoot>
                     <tbody>
                         @* *@
-                        @foreach (var category in Model)
+                        @foreach (var product in Model)
                         {
                             <tr>
-                                <th>@category.Id</th>
-                             @*   <th>
-                                    <img width="100" class="img-fluid" src="@category.PhotoUrl" />
-                                </th>
-                                <th>(@category.LangCode)</th>
+                                <th>@product.Id.Substring(0,10)</th>
                                 <th>
-                                    @category.Name
-                                </th>*@
+                                    @foreach (var photo in product.PhotoUrl.Take(1))
+                                    {
+                                        <img src="@photo" width="100" height="100" />
+                                    }
+                                </th>
+                                <th>
+                                    @product.CreatedDate
+                                </th>
+                                <th>
+                                    @* @(article. ? "Active" : "De Aktive"); *@
+                                </th>
                                 <th>
                                     @* @(article. ? "Active" : "De Aktive"); *@
                                 </th>
                                 <th class="d-flex">
-                                    <a href="/dashboard/Category/Detail/@category.Id" class="btn btn-secondary">
+                                    <a href="/dashboard/Product/Detail/@product.Id" class="btn btn-secondary">
                                         Deteil
                                     </a>
-                                    <a href="/dashboard/Category/Delete/@category.Id" class="btn btn-danger w-50">
+                                    <a href="/dashboard/Product/Delete/@product.Id" class="btn btn-danger w-50">
                                         Delete
                                     </a>
-                                    <a href="/dashboard/Category/Edit/@category.Id" class="btn btn-primary w-50">Update</a>
+                                    <a href="/dashboard/Product/Edit/@product.Id" class="btn btn-primary w-50">Update</a>
                                 </th>
                             </tr>
                         }

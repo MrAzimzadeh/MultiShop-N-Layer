@@ -43,7 +43,7 @@ namespace MultiShop.Core.DataAcces.MongoDB.Concrete
         }
 
         public void Add(TDocument model)
-        {
+            {
             //  Bu Mongo DB nin _contexti Kimi bir seydir!!!
             _collection.InsertOne(model);
         }

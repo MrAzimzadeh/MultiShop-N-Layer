@@ -90,3 +90,5 @@ C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiSho
 C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.WepApi\bin\Debug\net7.0\MultiShop.Core.pdb
 C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.WepApi\bin\Debug\net7.0\MultiShop.DataAcces.pdb
 C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.WepApi\bin\Debug\net7.0\MultiShop.Entities.pdb
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.WepApi\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\azimz\OneDrive\Masaüstü\ComparAcademy\ComparAcademy\K101NewG\MultiShop\MultiShop.WepApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

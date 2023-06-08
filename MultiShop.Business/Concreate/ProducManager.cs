@@ -51,6 +51,8 @@ namespace MultiShop.Business.Concreate
                 IsDeleted = false,
                 PhotoUrl = productCreateDto.PhotoUrl
             };
+
+          
             _productDal.Add(product);
         }
 
@@ -65,6 +67,6 @@ namespace MultiShop.Business.Concreate
             return product;
         }
 
-    
+
     }
 }
