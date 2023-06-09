@@ -4,6 +4,8 @@ using MultiShop.Business.Abstract;
 using MultiShop.Entities.DTOs.ProductDTOs;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using MultiShop.Entities.Concreate;
+using ZstdSharp.Unsafe;
 
 namespace MultiShop.WebUI.Areas.Dashboard.Controllers
 {
@@ -47,7 +49,7 @@ namespace MultiShop.WebUI.Areas.Dashboard.Controllers
                     return View(productCreateDto);
                 }
 
-                if (categoryId.Count  == 0)
+                if (categoryId.Count == 0)
                 {
                     ViewBag.Error = "Ged Categorya Sec";
                     return View(productCreateDto);
@@ -63,5 +65,46 @@ namespace MultiShop.WebUI.Areas.Dashboard.Controllers
             }
 
         }
+
+
+
+        [HttpGet]
+        public IActionResult Delete(string id)
+        {
+            var delete = _productsServices.GetProductRemoveById(id);
+            ViewBag.name = delete.ProductLanguage[0].Name;
+            return View(delete);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(string id, Product product)
+        {
+
+            _productsServices.ProductRemoveById(id);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        [HttpGet]
+        public IActionResult Edit(string id)
+        {
+            var cats = _categoryServices.GetCategoryList("Az");
+            ViewData["Category"] = cats;
+            var update = _productsServices.GetProductUpdateById(id);
+            return View(update);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(string id, Product product, List<string> categoryId)
+        {
+            var prosuctId =  _productsServices.GetProductUpdateById(id);
+            
+            return RedirectToAction(nameof(Index));
+        }
+
+
+
+
     }
 }

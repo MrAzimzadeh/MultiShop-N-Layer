@@ -1,0 +1,178 @@
+﻿@model MultiShop.Entities.DTOs.ProductDTOs.ProductUpdateDTO
+@if (ViewBag.Error != null)
+{
+    <div class="d-flex justify-content-center">
+        <div class="toast fade show align-items-center align-content-center" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+                <strong class="me-auto">
+                    @ViewBag.Error
+                </strong>
+                <small class="text-body-secondary">@DateTime.Now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body m-auto text-danger" asp-validation-summary="All">
+                @ViewBag.Error
+            </div>
+        </div>
+    </div>
+}
+
+
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Lang   (Az)
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label asp-for="ProductLanguages[0].Name"> Məhsul Adı </label>
+                                <input asp-for="ProductLanguages[0].Name" />
+                                <input asp-for="ProductLanguages[0].LangCode" value="Az" placeholder="Az" type="hidden" />
+                                <span asp-validation-for="ProductLanguages[0].Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ProductLanguages[0].Description" class="form-check-label">  Haqqlnda </label>
+                                <br />
+                                <textarea id="editor1" asp-for="ProductLanguages[0].Description"></textarea>
+                                <span asp-validation-for="ProductLanguages[0].Description" class="text-danger"></span>
+                                <input asp-for="ProductLanguages[0].LangCode" value="Az" placeholder="Az" type="hidden" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Lang (Ru)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label asp-for="ProductLanguages[1].Name"> наименование товара </label>
+                                <input asp-for="ProductLanguages[1].Name" />
+                                <input asp-for="ProductLanguages[1].LangCode" value="Ru" placeholder="Ru" type="hidden" />
+                                <span asp-validation-for="ProductLanguages[1].Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ProductLanguages[1].Description" class="form-check-label"> описание  </label>
+                                <br />
+                                <textarea id="editor2" asp-for="ProductLanguages[1].Description"></textarea>
+                                <span asp-validation-for="ProductLanguages[1].Description" class="text-danger"></span>
+                                <input asp-for="ProductLanguages[1].LangCode" value="Ru" placeholder="Ru" type="hidden" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Lang (En)
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label asp-for="ProductLanguages[2].Name"> Name of product </label>
+                                <input asp-for="ProductLanguages[2].Name" />
+                                <input asp-for="ProductLanguages[2].LangCode" value="En" placeholder="En" type="hidden" />
+                                <span asp-validation-for="ProductLanguages[2].Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ProductLanguages[2].Description" class="form-check-label"> Description  </label>
+                                <br />
+                                <textarea id="editor3" asp-for="ProductLanguages[2].Description"></textarea>
+                                <span asp-validation-for="ProductLanguages[2].Description" class="text-danger"></span>
+                                <input asp-for="ProductLanguages[2].LangCode" value="En" placeholder="En" type="hidden" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <label for="categoryId">category</label>
+                        <select id="categoryId" class="form-control" name="categoryId" multiple>
+                            @foreach (var tag in ViewData["Category"] as List<CategoryListDTO>)
+                            {
+
+                                var result = Model.Categories.Contains(tag.Id);
+
+                                if (result)
+
+                                {
+                                    <option selected value="@tag.Id">@tag.Name</option>
+                                }
+
+                                else
+
+                                {
+                                    <option value="@tag.Id">@tag.Name</option>
+                                }
+
+                            }
+                        </select>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label asp-for="DiscountEndDate"></label>
+                            <input asp-for="DiscountEndDate" class="form-control" />
+                            <span asp-validation-for="DiscountEndDate"></span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label asp-for="Discount"></label>
+                            <input asp-for="Discount" class="form-control" />
+                            <span asp-validation-for="Discount"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label asp-for="Price"></label>
+                            <input asp-for="Price" class="form-control" />
+                            <span asp-validation-for="Price"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label asp-for="PhotoUrl"></label>
+                            <input asp-for="PhotoUrl" class="form-control" />
+                            <span asp-validation-for="PhotoUrl"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <input type="submit" class="btn btn-primary w-100" />
+    </div>
+</form>
+@section Scripts{
+    <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
+    <script>
+        CKEDITOR.replace('editor2');
+    </script>
+    <script>
+        CKEDITOR.replace('editor3');
+    </script>
+}

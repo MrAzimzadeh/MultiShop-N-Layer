@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using MultiShop.Business.Abstract;
 using MultiShop.DataAcces.Abstract;
+using MultiShop.DataAcces.Concrete.MongoDb;
 using MultiShop.Entities.Concreate;
+using MultiShop.Entities.DTOs.Category;
 using MultiShop.Entities.DTOs.ProductDTOs;
 
 namespace MultiShop.Business.Concreate
@@ -52,7 +54,7 @@ namespace MultiShop.Business.Concreate
                 PhotoUrl = productCreateDto.PhotoUrl
             };
 
-          
+
             _productDal.Add(product);
         }
 
@@ -67,6 +69,102 @@ namespace MultiShop.Business.Concreate
             return product;
         }
 
+        public List<ProductListDTO> GetProductList(string lang)
+        {
+            var products = _productDal.GetAll();
 
+            var result = products.Select(x => new ProductListDTO()
+            {
+                Id = x.Id,
+                PhotoUrl = x.PhotoUrl,
+                Name = x.ProductLanguages.FirstOrDefault(x => x.LangCode == lang).Name,
+                SeoUrl = x.ProductLanguages.FirstOrDefault(x => x.LangCode == lang).SeoUrl,
+                LangCode = x.ProductLanguages.FirstOrDefault(x => x.LangCode == lang).LangCode,
+                Discount = x.Discount,
+                Price = x.Price,
+                Categories = x.Categories,
+                CreatedDate = x.CreatedDate,
+                Description = x.ProductLanguages.FirstOrDefault(x => x.Description == lang).Description,
+                DiscountEndDate = x.DiscountEndDate,
+                IsActive = x.IsActive,
+                IsDeleted = x.IsDeleted,
+                UpdatedDate = x.UpdatedDate
+
+            }).ToList();
+
+            return result;
+        }
+
+        public ProductUpdateDTO GetProductUpdateById(string id)
+        {
+            var result = _productDal.Get(id);
+            ProductUpdateDTO productUpdate = new()
+            {
+                Id = result.Id,
+                Categories = result.Categories,
+                CreatedDate = result.CreatedDate,
+                Discount = result.Discount,
+                Price = result.Price,
+                DiscountEndDate = result.DiscountEndDate,
+                IsActive = result.IsActive,
+                IsDeleted = result.IsDeleted,
+                UpdatedDate = result.UpdatedDate,
+                PhotoUrl = result.PhotoUrl,
+                ProductLanguages = result.ProductLanguages
+
+            };
+            return productUpdate;
+        }
+
+        public void UpdateProduct(string id, ProductUpdateDTO productUpdateDto)
+        {
+            List<ProductLanguage> productLanguages = new();
+            foreach (var productLang in productUpdateDto.ProductLanguages)
+            {
+                ProductLanguage productLanguage = new()
+                {
+                    LangCode = productLang.LangCode,
+                    Name = productLang.Name,
+                    Description = productLang.Description,
+                    SeoUrl = "lggjk"
+                };
+                productLanguages.Add(productLanguage);
+            }
+            Product product = new()
+            {
+                Id = id,
+                PhotoUrl = productUpdateDto.PhotoUrl,
+                Categories = productUpdateDto.Categories,
+                CreatedDate = productUpdateDto.CreatedDate,
+                Discount = productUpdateDto.Discount,
+                Price = productUpdateDto.Price,
+                DiscountEndDate = productUpdateDto.DiscountEndDate,
+                IsActive = productUpdateDto.IsActive,
+                IsDeleted = productUpdateDto.IsDeleted,
+                ProductLanguages = productLanguages,
+                UpdatedDate = DateTime.Now
+            };
+
+
+            _productDal.Update(id, product);
+        }
+
+        public ProductRemove GetProductRemoveById(string id)
+        {
+            var product = _productDal.Get(id);
+            ProductRemove productRemove = new()
+            {
+                Id = id,
+                PhotoUrl = product.PhotoUrl,
+                ProductLanguage = product.ProductLanguages,
+            };
+            return productRemove;
+        }
+
+        public void ProductRemoveById(string id)
+        {
+            var result = _productDal.Get(id);
+            _productDal.Remove(result.Id);
+        }
     }
 }
