@@ -106,21 +106,15 @@
                         <select id="categoryId" class="form-control" name="categoryId" multiple>
                             @foreach (var tag in ViewData["Category"] as List<CategoryListDTO>)
                             {
-
                                 var result = Model.Categories.Contains(tag.Id);
-
                                 if (result)
-
                                 {
                                     <option selected value="@tag.Id">@tag.Name</option>
                                 }
-
                                 else
-
                                 {
                                     <option value="@tag.Id">@tag.Name</option>
                                 }
-
                             }
                         </select>
                     </div>

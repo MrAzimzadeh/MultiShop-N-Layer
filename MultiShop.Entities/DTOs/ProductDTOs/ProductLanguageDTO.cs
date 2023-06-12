@@ -13,7 +13,6 @@ namespace MultiShop.Entities.DTOs.ProductDTOs
         public string Name { get; set; }
         [Required]
         public string Description { get; set; }
-        [Required]
         public string LangCode { get; set; }
     }
 }

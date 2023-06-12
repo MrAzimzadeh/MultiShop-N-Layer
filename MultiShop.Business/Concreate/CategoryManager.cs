@@ -168,11 +168,24 @@ namespace MultiShop.Business.Concreate
 
         }
 
-        public List<ProductCategoryDTO> GetProductCategory()
+   
+
+        public List<CategoryListDTO> GetCategoriesByLanguage(string lang)
         {
-            var categories = _categoryDal.GetProductCategories();
-            var cat =_mapper.Map<List<ProductCategoryDTO>>(categories);
-            return cat;
+            var categories = _categoryDal.GetAll();
+
+            var result = categories.Select(x => new CategoryListDTO
+            {
+                Id = x.Id,
+                Name = x.CategoryLanguages.FirstOrDefault(z => z.LangCode == lang).Name,
+                LangCode = lang,
+                PhotoUrl = x.PhotoUrl,
+                SeoUrl = x.CategoryLanguages.FirstOrDefault(z => z.LangCode == lang).SeoUrl,
+                ProductCount = 0
+            }).ToList();
+
+            return result;
+
         }
     }
 }

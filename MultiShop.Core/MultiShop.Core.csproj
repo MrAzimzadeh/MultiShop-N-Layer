@@ -10,6 +10,7 @@
     <Folder Include="Entities\Concreate\" />
     <Folder Include="DataAcces\EntityFramework\Abstract\" />
     <Folder Include="DataAcces\EntityFramework\Concrete\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -19,4 +19,8 @@
     <ProjectReference Include="..\MultiShop.DataAcces\MultiShop.DataAcces.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Upload\" />
+  </ItemGroup>
+
 </Project>

@@ -18,7 +18,7 @@ namespace MultiShop.WebUi.Areas.Dashboard.Controllers
 
         public IActionResult Index()
         {
-            var categories = _categoryServices.GetCategoryList("Ru");
+            var categories = _categoryServices.GetCategoriesByLanguage("Az");
             return View(categories);
         }
 

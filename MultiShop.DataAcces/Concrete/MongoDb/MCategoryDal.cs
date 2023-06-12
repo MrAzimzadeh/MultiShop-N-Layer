@@ -12,20 +12,27 @@ using MultiShop.Entities.DTOs.ProductDTOs;
 
 namespace MultiShop.DataAcces.Concrete.MongoDb
 {
-    public class MCategoryDal : MongoRepository<Category> , ICategoryDal
+    public class MCategoryDal : MongoRepository<Category>, ICategoryDal
     {
+
         private readonly IMongoCollection<Category> _collection;
-        public MCategoryDal(IDatabseSettings databseSettings) : base(databseSettings)
+        public MCategoryDal(IDatabseSettings databaseSettings) : base(databaseSettings)
         {
-            var database = new MongoClient(databseSettings.ConnectionString).GetDatabase(databseSettings.DatabaseName);
+            var database = new MongoClient(databaseSettings.ConnectionString).GetDatabase(databaseSettings.DatabaseName);
             _collection = database.GetCollection<Category>("category");
         }
 
-        public List<ProductCategoryDTO> GetProductCategories()
+        public List<string> GetCategoriesByLanguage(string langcode, List<string> categoryId)
         {
-            var filter = Builders<Category>.Filter.ElemMatch(x => x.CategoryLanguages, x => x.LangCode == "Az");
-            var category =  _collection.Find(filter).ToList();
-            return new List<ProductCategoryDTO>();
+            var categories = _collection.Find(FilterDefinition<Category>.Empty).ToList();
+
+            var result = categories.Where(x => categoryId.Contains(x.Id)).Select(x => new
+            {
+                x.CategoryLanguages.FirstOrDefault(x => x.LangCode == langcode).Name
+            }).Select(x => x.ToString()).ToList();
+            return result;
         }
     }
+
 }
+

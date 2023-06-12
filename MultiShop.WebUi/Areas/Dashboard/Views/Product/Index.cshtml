@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Product>
+﻿@model IEnumerable<MultiShop.Entities.DTOs.ProductDTOs.ProductListDTO>
 <div class="container-fluid">
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
@@ -56,10 +56,10 @@
                                     @product.CreatedDate
                                 </th>
                                 <th>
-                                    @* @(article. ? "Active" : "De Aktive"); *@
+                                    @product.Name 
                                 </th>
                                 <th>
-                                    @* @(article. ? "Active" : "De Aktive"); *@
+                                     @(product.IsActive ? "Active" : "De Aktive");
                                 </th>
                                 <th class="d-flex">
                                     <a href="/dashboard/Product/Detail/@product.Id" class="btn btn-secondary">

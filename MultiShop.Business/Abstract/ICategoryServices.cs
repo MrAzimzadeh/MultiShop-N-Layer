@@ -22,6 +22,6 @@ namespace MultiShop.Business.Abstract
         void RemoveCategory(string id);
         // Detail 
         CategoryDetailDTO GetDetailById(string id);
-        List<ProductCategoryDTO> GetProductCategory();
+        List<CategoryListDTO> GetCategoriesByLanguage(string lang);
     }
 }

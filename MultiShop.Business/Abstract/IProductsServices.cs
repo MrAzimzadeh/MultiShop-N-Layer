@@ -22,13 +22,19 @@ namespace MultiShop.Business.Abstract
         // Get Language 
         List<ProductListDTO> GetProductList(string lang);
 
+        List<ProductListDTO> GetDashboardProducts(string langcode);
+
         // Update
         ProductUpdateDTO GetProductUpdateById(string id);
         void UpdateProduct(string id, ProductUpdateDTO productUpdateDto);
 
         // Remove 
         ProductRemove  GetProductRemoveById(string id);
+        
         void ProductRemoveById(string id);
+
+
+        
 
 
 

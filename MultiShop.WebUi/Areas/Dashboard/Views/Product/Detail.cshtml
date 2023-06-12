@@ -1,0 +1,36 @@
+﻿@model Product
+
+<div class="container m-auto row">
+    <div class="card col-5 ">
+        @foreach (var lang in Model.ProductLanguages)
+        {
+            <span>Lang Code : (@lang.LangCode)</span> @lang.Name
+            <hr />
+        }
+    </div>
+    <div class="card col-1">
+        @foreach (var photoUrl in Model.PhotoUrl)
+        {
+            <a href="@photoUrl" target="_blank"><img src="@photoUrl" width="100" height="100" class="img-fluid" /></a>
+            <hr/>
+        }
+    </div>
+    <div class="card col-2">
+        <h3>Category : </h3>
+        @foreach (var category in ViewData["Categories"] as List<string>)
+        {
+            <span>@category</span>
+            <hr/>
+        }
+    </div>
+    <div class="card col-5">
+        <span>Discount : @Model.Discount</span>
+        <span>CreatedDate : @Model.CreatedDate</span>
+        <span>DiscountEndDate : @Model.DiscountEndDate</span>
+        <span>Active : @Model.IsActive</span>
+        <span>Delete : @Model.IsDeleted</span>
+        <span>Price : @Model.Price</span>
+        <span>UpdatedDate : @Model.UpdatedDate</span>
+    </div>
+
+</div>

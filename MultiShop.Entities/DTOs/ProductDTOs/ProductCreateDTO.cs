@@ -15,7 +15,6 @@ namespace MultiShop.Entities.DTOs.ProductDTOs
         //public string Id { get; set; } //  CCreate de Id olmamalidir!
         [Required]
         public List<ProductLanguageDTO> ProductLanguages { get; set; }
-        [Required]
         public List<string> PhotoUrl { get; set; }
         [Required]
         public decimal Price { get; set; }

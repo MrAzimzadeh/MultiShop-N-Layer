@@ -7,11 +7,13 @@ using MultiShop.Core.DataAcces;
 using MultiShop.Core.DataAcces.MongoDB;
 using MultiShop.DataAcces.Concrete.EntityFramework;
 using MultiShop.Entities.Concreate;
+using MultiShop.Entities.DTOs.ProductDTOs;
 
 namespace MultiShop.DataAcces.Abstract
 {
     public interface IProductDal  :IMongoRepository<Product>
     {
+        List<ProductListDTO> GetProductByLanguage(string langcode);
 
     }
 }
