@@ -32,10 +32,6 @@ namespace MultiShop.WebUI.Areas.Dashboard.Controllers
         }
 
         #region Create
-
-
-
-
         public IActionResult Create()
         {
             var cats = _categoryServices.GetCategoryList("Az");
@@ -100,9 +96,6 @@ namespace MultiShop.WebUI.Areas.Dashboard.Controllers
         #endregion
 
         #region  Edit
-
-
-
         [HttpGet]
         public IActionResult Edit(string id)
         {
@@ -113,11 +106,33 @@ namespace MultiShop.WebUI.Areas.Dashboard.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(string id, ProductUpdateDTO product, List<string> categoryId)
+        public IActionResult Edit(string id, ProductUpdateDTO product, List<string> categoryId, List<IFormFile>? photo)
         {
+            #region Categories
+            var cats = _categoryServices.GetCategoryList("Az");
+            ViewData["Category"] = cats;
+            //todo Ikiside Eyni tipde oldugu ucun bunu ede bilerik ->
+            product.Categories = categoryId;
+            #endregion
+            #region Photo
             var prosuctId = _productsServices.GetProductUpdateById(id);
+            if (photo.Count < 0)
+            {
+                List<string> photos = new();
+                for (int i = 0; i < photo.Count; i++)
+                {
+                    var path = "/Upload/" + Guid.NewGuid() + Path.GetExtension(photo[i].FileName);
+                    using (var fileStream = new FileStream(_env.WebRootPath + path, FileMode.Create))
+                    {
+                        photo[i].CopyTo(fileStream);
+                    }
 
+                    photos.Add(path);
+                }
+                product.PhotoUrl = photos;
+            }
 
+            #endregion
             _productsServices.UpdateProduct(id, product);
             return RedirectToAction(nameof(Index));
         }

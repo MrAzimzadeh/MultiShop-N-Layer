@@ -170,20 +170,20 @@ namespace MultiShop.Business.Concreate
 
    
 
-        public List<CategoryListDTO> GetCategoriesByLanguage(string lang)
+        public List<CategoryListDTO>  GetCategoriesByLanguage(string lang)
         {
             var categories = _categoryDal.GetAll();
 
             var result = categories.Select(x => new CategoryListDTO
             {
-                Id = x.Id,
+                Id = x.Id, 
                 Name = x.CategoryLanguages.FirstOrDefault(z => z.LangCode == lang).Name,
                 LangCode = lang,
                 PhotoUrl = x.PhotoUrl,
                 SeoUrl = x.CategoryLanguages.FirstOrDefault(z => z.LangCode == lang).SeoUrl,
                 ProductCount = 0
             }).ToList();
-
+             
             return result;
 
         }

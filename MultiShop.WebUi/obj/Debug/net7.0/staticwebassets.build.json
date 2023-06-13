@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W8ZRb9qm8RX2rv3SOlvF4ZJUBSvOLd9dpfmdVqHdO5A=",
+  "Hash": "SpzlWZSuAkqI16xSiuCr39jTw6vPHRTABY9WZiTb/Ts=",
   "Source": "MultiShop.WebUI",
   "BasePath": "_content/MultiShop.WebUI",
   "Mode": "Default",
@@ -34170,6 +34170,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\16f572be-e7b4-454e-9daf-e57ca19d144b.jpg"
     },
     {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\1d6fcc69-191d-4c80-82c0-03a243c7101f.jpeg",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/1d6fcc69-191d-4c80-82c0-03a243c7101f.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\1d6fcc69-191d-4c80-82c0-03a243c7101f.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\1dd6deb2-2997-4330-98bd-6e60fe5c9da1.mp4",
       "SourceId": "MultiShop.WebUI",
       "SourceType": "Discovered",
@@ -34255,6 +34272,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\25aa1573-0073-414b-bf8a-15194540ec8c.jpg"
     },
     {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\25b67d72-18eb-4d4e-947f-e87ba1da2cde.jpg",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/25b67d72-18eb-4d4e-947f-e87ba1da2cde.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\25b67d72-18eb-4d4e-947f-e87ba1da2cde.jpg"
+    },
+    {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\28796ef4-202e-42d2-9bc8-467bf4b5e818.jpg",
       "SourceId": "MultiShop.WebUI",
       "SourceType": "Discovered",
@@ -34338,6 +34372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\492e1623-b1b0-4ab2-8350-58add0fcd7a7.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\4aa1d4b3-31b2-46f7-8b28-ad816600ae2a.png",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/4aa1d4b3-31b2-46f7-8b28-ad816600ae2a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\4aa1d4b3-31b2-46f7-8b28-ad816600ae2a.png"
     },
     {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\506a3266-9519-4fff-972a-0c8a8343b312.jpg",
@@ -34442,6 +34493,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\5d578c76-ada8-4076-9bf1-ddb476dcd717.mp4"
     },
     {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\5ed05b8a-60ad-4502-b65e-2a0f48dac052.mp4",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/5ed05b8a-60ad-4502-b65e-2a0f48dac052.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\5ed05b8a-60ad-4502-b65e-2a0f48dac052.mp4"
+    },
+    {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\63efcd10-a481-4338-84bc-e85a19d7d419.jpeg",
       "SourceId": "MultiShop.WebUI",
       "SourceType": "Discovered",
@@ -34474,6 +34542,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\6e0143ca-6e90-4607-8b34-d5ed88b3d085.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\70bca983-2f5b-4b6b-8e76-64325c352ecf.jpeg",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/70bca983-2f5b-4b6b-8e76-64325c352ecf.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\70bca983-2f5b-4b6b-8e76-64325c352ecf.jpeg"
     },
     {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\74a86b6b-b03d-47e6-899d-7a56687e9123.jpg",
@@ -34542,6 +34627,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\7d12819c-408d-4a61-b75a-75177b815540.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\831e3832-8f76-4f52-af4d-996a4793e9e2.jpg",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/831e3832-8f76-4f52-af4d-996a4793e9e2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\831e3832-8f76-4f52-af4d-996a4793e9e2.jpg"
     },
     {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\8785bd64-0749-4be5-9f55-5bb6a61a1740.jpg",
@@ -34731,6 +34833,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\a129b1f4-7f5a-4a74-8e22-35ff0ceaaf57.jpg"
     },
     {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\a2002753-a82f-45ab-b44e-f8eae561e5a7.jpg",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/a2002753-a82f-45ab-b44e-f8eae561e5a7.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\a2002753-a82f-45ab-b44e-f8eae561e5a7.jpg"
+    },
+    {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\a8d26fbc-785f-46e9-bc1f-1c5bf765493d.png",
       "SourceId": "MultiShop.WebUI",
       "SourceType": "Discovered",
@@ -34746,6 +34865,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\a8d26fbc-785f-46e9-bc1f-1c5bf765493d.png"
+    },
+    {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\b03d9560-0e31-4a1a-bf98-1a04be87c1be.jpeg",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/b03d9560-0e31-4a1a-bf98-1a04be87c1be.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\b03d9560-0e31-4a1a-bf98-1a04be87c1be.jpeg"
     },
     {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\b2568443-7306-4fc3-9153-e3cc972ce03c.jpg",
@@ -34797,6 +34933,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\b7f84cab-6873-404c-a893-65438fa39eab.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\b87c9af9-eba9-446d-af3b-d27a8fc7c30d.jpg",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/b87c9af9-eba9-446d-af3b-d27a8fc7c30d.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\b87c9af9-eba9-446d-af3b-d27a8fc7c30d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\ba12f021-f8b6-4d0c-81ea-2e285f86a91e.jpg",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/ba12f021-f8b6-4d0c-81ea-2e285f86a91e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\ba12f021-f8b6-4d0c-81ea-2e285f86a91e.jpg"
     },
     {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\ba470b67-65ae-4879-aee3-9afaf375e80d.jpg",
@@ -35035,6 +35205,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\e079d068-4688-4de1-a995-51302e9b05df.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\e2855308-5993-45b0-b002-91160e990b60.jpg",
+      "SourceId": "MultiShop.WebUI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\",
+      "BasePath": "_content/MultiShop.WebUI",
+      "RelativePath": "Upload/e2855308-5993-45b0-b002-91160e990b60.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\e2855308-5993-45b0-b002-91160e990b60.jpg"
     },
     {
       "Identity": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.WebUi\\wwwroot\\Upload\\e5ef8a7f-021b-4d60-ad75-bc56f690dc2d.mp4",
