@@ -208,7 +208,7 @@
                         </div>
                     </div>
                     <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/product/detail/@discountProduct.Id">@discountProduct.Name</a>
+                        <a class="h6 text-decoration-none text-truncate" href="/product/detail/@discountProduct.Id">@discountProduct.Name.Substring(0 ,3)</a>
                         <div class="d-flex align-items-center justify-content-center mt-2">
                             <h5>₼@discountProduct.Discount</h5><h6 class="text-muted ml-2"><del>₼@discountProduct.Price</del></h6>
                         </div>
@@ -223,9 +223,7 @@
                     </div>
                 </div>
             </div>
-
         }
-
     </div>
 </div>
 <!-- Products End -->
@@ -273,7 +271,7 @@
                     </div>
                 </div>
                 <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">@recentProduct.Name.Substring(0,3)</a>
+                    <a class="h6 text-decoration-none text-truncate" href="/product/detail/@recentProduct.Id">@recentProduct.Name.Substring(0,3)</a>
                     <div class="d-flex align-items-center justify-content-center mt-2">
                        
                             @if (@recentProduct.Discount > 0)
