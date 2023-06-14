@@ -17,6 +17,7 @@ namespace MultiShop.DataAcces.Abstract
         // Order by elemek ucun 
         List<RecentProductDTO> RecentProduct(string langcide);
         List<DiscountProductDTO> DiscountProduct(string langcide);
-
+        ProductDetail GetProductDetail(string id , string lang);
     }
+
 }

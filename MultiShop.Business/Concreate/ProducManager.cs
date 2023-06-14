@@ -38,6 +38,7 @@ namespace MultiShop.Business.Concreate
                     LangCode = count == 0 ? "Az" : count == 1 ? "Ru" : "En",
                     SeoUrl = "",
                 };
+                count++;
                 productLanguages.Add(productLanguage);
             }
 
@@ -180,6 +181,11 @@ namespace MultiShop.Business.Concreate
         public List<DiscountProductDTO> discountProduct(string langcide)
         {
             return _productDal.DiscountProduct(langcide);
+        }
+
+        public ProductDetail GetDetailByIdLangCode(string id, string langcide)
+        {
+            return _productDal.GetProductDetail(id, langcide);
         }
     }
 }

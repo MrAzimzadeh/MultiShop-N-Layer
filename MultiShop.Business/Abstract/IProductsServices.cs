@@ -20,6 +20,10 @@ namespace MultiShop.Business.Abstract
 
         //getBy Id
         Product GetProductById(string id);
+        //Detail ID
+        ProductDetail GetDetailByIdLangCode(string id , string langcide);
+
+
         // Get Language 
         List<ProductListDTO> GetProductList(string lang);
 

@@ -72,5 +72,40 @@ namespace MultiShop.DataAcces.Concrete.MongoDb
             }).Where(x=>x.Discount > 0).OrderByDescending(x => x.Id).ToList();
             return result;
         }
+
+        public ProductDetail GetProductDetail(string id, string lang)
+        {
+            var product = _collection.Find(FilterDefinition<Product>.Empty).ToList();
+            var result = product.Find(x => x.Id == id);
+            ProductDetail detail = new()
+            {
+                Name  = result.ProductLanguages.FirstOrDefault(x=>x.LangCode == lang).Name,
+                Categories = result.Categories,
+                PhotoUrl = result.PhotoUrl , 
+                Price = result.Price,
+                IsActive = result.IsActive,
+                IsDeleted = result.IsDeleted,
+                LangCode = result.ProductLanguages.FirstOrDefault(x => x.LangCode == lang).LangCode,
+                CreatedDate = result.CreatedDate,
+                Description = result.ProductLanguages.FirstOrDefault(x => x.LangCode == lang).Description,
+                Discount = result.Discount,
+                DiscountEndDate = result.DiscountEndDate,
+                Id = result.Id,
+                SeoUrl = result.ProductLanguages.FirstOrDefault(x => x.LangCode == lang).SeoUrl,
+                UpdatedDate = result.UpdatedDate
+
+            };
+            //var result = product.Select(x => new ProductDetail
+            //{
+            //    Id = id,
+            //    Name = x.ProductLanguages.FirstOrDefault(z => z.LangCode == lang).Name,
+            //    PhotoUrl = x.PhotoUrl,
+            //    Price = x.Price,
+            //    IsActive = x.IsActive,
+            //    IsDeleted = x.IsDeleted,
+            //    Categories = _categoryDal.GetCategoriesByLanguage(lang, x.Categories)
+            //}).FirstOrDefault();
+            return detail;
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace MultiShop.WebUi.Controllers
             var categories = _categoryServices.GetCategoryList("Az");
             var discount = _productServices.discountProduct("Az");
             var recent = _productServices.RecentProductList("Az");
-
+            
             HomeVM vm = new()
             {
                 CategoryList = categories,
