@@ -12,7 +12,7 @@ using MultiShop.Entities.DTOs.ProductDTOs;
 
 namespace MultiShop.DataAcces.Concrete.MongoDb
 {
-    public class MProductDal :  MongoRepository<Product> , IProductDal
+    public class MProductDal : MongoRepository<Product>, IProductDal
     {
         private readonly IMongoCollection<Product> _collection;
         private readonly ICategoryDal _categoryDal;
@@ -39,6 +39,38 @@ namespace MultiShop.DataAcces.Concrete.MongoDb
             return result;
         }
 
+        public List<RecentProductDTO> RecentProduct(string langcide)
+        {
+            var product = _collection.Find(FilterDefinition<Product>.Empty).ToList();
+            var result = product.Select(x => new RecentProductDTO
+            {
+                Id = x.Id,
+                Discount = x.Discount,
+                Name = x.ProductLanguages.FirstOrDefault(z => z.LangCode == langcide).Name,
+                PhotoUrl = x.PhotoUrl.FirstOrDefault(),
+                Price = x.Price,
+                IsActive = x.IsActive,
+                IsDeleted = x.IsDeleted,
+                Categories = _categoryDal.GetCategoriesByLanguage(langcide, x.Categories)
+            }).OrderByDescending(x => x.Id).ToList();
+            return result;
+        }
 
+        public List<DiscountProductDTO> DiscountProduct(string langcide)
+        {
+            var product = _collection.Find(FilterDefinition<Product>.Empty).ToList();
+            var result = product.Select(x => new DiscountProductDTO
+            {
+                Id = x.Id,
+                Discount = x.Discount,
+                Name = x.ProductLanguages.FirstOrDefault(z => z.LangCode == langcide).Name,
+                PhotoUrl = x.PhotoUrl.FirstOrDefault(),
+                Price = x.Price,
+                IsActive = x.IsActive,
+                IsDeleted = x.IsDeleted,
+                Categories = _categoryDal.GetCategoriesByLanguage(langcide, x.Categories)
+            }).Where(x=>x.Discount > 0).OrderByDescending(x => x.Id).ToList();
+            return result;
+        }
     }
 }

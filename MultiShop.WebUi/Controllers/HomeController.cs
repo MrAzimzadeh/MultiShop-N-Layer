@@ -12,7 +12,7 @@ namespace MultiShop.WebUi.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IProductsServices _productServices;
-        private readonly  ICategoryServices _categoryServices;
+        private readonly ICategoryServices _categoryServices;
         public HomeController(ILogger<HomeController> logger, IProductsServices productServices, ICategoryServices categoryServices)
         {
             _logger = logger;
@@ -23,10 +23,14 @@ namespace MultiShop.WebUi.Controllers
         public IActionResult Index()
         {
             var categories = _categoryServices.GetCategoryList("Az");
+            var discount = _productServices.discountProduct("Az");
+            var recent = _productServices.RecentProductList("Az");
 
             HomeVM vm = new()
             {
-                CategoryList = categories
+                CategoryList = categories,
+                DiscountProductDtos = discount,
+                RecentProductDtos = recent
             };
             return View(vm);
         }

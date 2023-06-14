@@ -151,8 +151,6 @@ namespace MultiShop.Business.Concreate
                 ProductLanguages = productLanguages,
                 UpdatedDate = DateTime.Now
             };
-
-
             _productDal.Update(id, product);
         }
 
@@ -172,6 +170,16 @@ namespace MultiShop.Business.Concreate
         {
             var result = _productDal.Get(id);
             _productDal.Remove(result.Id);
+        }
+
+        public List<RecentProductDTO> RecentProductList(string langcide)
+        {
+            return _productDal.RecentProduct(langcide);
+        }
+
+        public List<DiscountProductDTO> discountProduct(string langcide)
+        {
+            return _productDal.DiscountProduct(langcide);
         }
     }
 }

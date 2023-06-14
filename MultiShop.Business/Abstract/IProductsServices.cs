@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MongoDB.Driver.Core.Misc;
 using MultiShop.Entities.Concreate;
 using MultiShop.Entities.DTOs.Category;
 using MultiShop.Entities.DTOs.ProductDTOs;
@@ -32,9 +33,12 @@ namespace MultiShop.Business.Abstract
         ProductRemove  GetProductRemoveById(string id);
         
         void ProductRemoveById(string id);
+        // Home 
+        List<RecentProductDTO> RecentProductList(string langcide);
+        List<DiscountProductDTO> discountProduct(string langcide);
 
 
-        
+
 
 
 
