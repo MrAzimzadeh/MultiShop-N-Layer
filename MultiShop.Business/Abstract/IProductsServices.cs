@@ -20,7 +20,7 @@ namespace MultiShop.Business.Abstract
 
         //getBy Id
         Product GetProductById(string id);
-        //Detail ID
+        //Detail ID  an Lang 
         ProductDetail GetDetailByIdLangCode(string id , string langcide);
 
 

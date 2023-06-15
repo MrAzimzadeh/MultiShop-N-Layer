@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using MultiShop.Core.DataAcces.MongoDB.Concrete;
 using MultiShop.Core.DataAcces.MongoDB.MongoSettings;
@@ -69,19 +70,22 @@ namespace MultiShop.DataAcces.Concrete.MongoDb
                 IsActive = x.IsActive,
                 IsDeleted = x.IsDeleted,
                 Categories = _categoryDal.GetCategoriesByLanguage(langcide, x.Categories)
-            }).Where(x=>x.Discount > 0).OrderByDescending(x => x.Id).ToList();
+            }).Where(x => x.Discount > 0).OrderByDescending(x => x.Id).ToList();
             return result;
         }
 
         public ProductDetail GetProductDetail(string id, string lang)
         {
-            var product = _collection.Find(FilterDefinition<Product>.Empty).ToList();
-            var result = product.Find(x => x.Id == id);
+
+            var filter = Builders<Product>.Filter.Eq("_id", ObjectId.Parse(id));
+            
+            var result = _collection.Find(filter).FirstOrDefault();
+            
             ProductDetail detail = new()
             {
-                Name  = result.ProductLanguages.FirstOrDefault(x=>x.LangCode == lang).Name,
+                Name = result.ProductLanguages.FirstOrDefault(x => x.LangCode == lang).Name,
                 Categories = result.Categories,
-                PhotoUrl = result.PhotoUrl , 
+                PhotoUrl = result.PhotoUrl,
                 Price = result.Price,
                 IsActive = result.IsActive,
                 IsDeleted = result.IsDeleted,

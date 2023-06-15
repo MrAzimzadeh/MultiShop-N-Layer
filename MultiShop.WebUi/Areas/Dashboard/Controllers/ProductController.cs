@@ -139,7 +139,6 @@ namespace MultiShop.WebUI.Areas.Dashboard.Controllers
         #endregion
 
         #region Detail
-
         public IActionResult Detail(string id)
         {
             var categories = _categoryServices.GetCategoriesByLanguage("Az");
@@ -153,8 +152,6 @@ namespace MultiShop.WebUI.Areas.Dashboard.Controllers
             ViewData["Categories"] = categoriList;
             return View(detail);
         }
-
-
         #endregion
 
 

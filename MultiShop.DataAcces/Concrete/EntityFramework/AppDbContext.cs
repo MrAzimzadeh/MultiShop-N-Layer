@@ -20,6 +20,6 @@ namespace MultiShop.DataAcces.Concrete.EntityFramework
             ("Server=127.0.0.1,1433;Database=MultiShopDBTest; User Id=SA; Password=Mahammad123456; TrustServerCertificate=True;");
         }
 
-        public DbSet<Product> Products { get; set; }
+       
     }
 }

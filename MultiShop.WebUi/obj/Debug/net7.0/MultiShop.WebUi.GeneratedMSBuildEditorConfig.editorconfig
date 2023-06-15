@@ -76,6 +76,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -90,6 +98,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [c:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/Shared/_AuthLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/azimz/OneDrive/Masaüstü/ComparAcademy/ComparAcademy/K101NewG/MultiShop/MultiShop.WebUi/Views/Shared/_ValidationScriptsPartial.cshtml]
