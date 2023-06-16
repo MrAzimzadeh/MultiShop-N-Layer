@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj": {}
+    "c:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj": {}
   },
   "projects": {
-    "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj": {
+    "c:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj",
+        "projectUniqueName": "c:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj",
         "projectName": "MultiShop.Testings",
-        "projectPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj",
+        "projectPath": "c:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj",
         "packagesPath": "C:\\Users\\azimz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\obj\\",
+        "outputPath": "c:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

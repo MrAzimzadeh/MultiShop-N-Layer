@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WwGj+tbIiwEPWSU5/SHDE6QiO3BFNlrCfsvfUZqSevnfUBHK4XX/l90hc3f77mCJL48/B6II7l4Fjc8+i9ydOw==",
+  "dgSpecHash": "OyXLBgkiBWZUOIkBPy3Llj3ihWDB0PYXeVmSmQFeRsz0h56/FhFG0kfZtC6xdkBy+3UiVI/+H4rwZhUzHvGk+g==",
   "success": true,
-  "projectFilePath": "c:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.DataAcces\\MultiShop.DataAcces.csproj",
+  "projectFilePath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.DataAcces\\MultiShop.DataAcces.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\azimz\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

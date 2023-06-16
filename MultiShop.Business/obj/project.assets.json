@@ -4578,8 +4578,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "c:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.DataAcces\\MultiShop.DataAcces.csproj": {
-              "projectPath": "c:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.DataAcces\\MultiShop.DataAcces.csproj"
+            "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.DataAcces\\MultiShop.DataAcces.csproj": {
+              "projectPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.DataAcces\\MultiShop.DataAcces.csproj"
             },
             "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Entities\\MultiShop.Entities.csproj": {
               "projectPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Entities\\MultiShop.Entities.csproj"
