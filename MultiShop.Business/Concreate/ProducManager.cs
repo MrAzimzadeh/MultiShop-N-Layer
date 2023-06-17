@@ -25,6 +25,7 @@ namespace MultiShop.Business.Concreate
 
         // bu method bize butun productlari getirir 
 
+        #region CRUD
         public void AddProduct(ProductCreateDTO productCreateDto)
         {
             List<ProductLanguage> productLanguages = new();
@@ -59,7 +60,46 @@ namespace MultiShop.Business.Concreate
 
             _productDal.Add(product);
         }
+        public void UpdateProduct(string id, ProductUpdateDTO productUpdateDto)
+        {
+            List<ProductLanguage> productLanguages = new();
+            foreach (var productLang in productUpdateDto.ProductLanguages)
+            {
+                ProductLanguage productLanguage = new()
+                {
+                    LangCode = productLang.LangCode,
+                    Name = productLang.Name,
+                    Description = productLang.Description,
+                    SeoUrl = "lggjk"
+                };
+                productLanguages.Add(productLanguage);
+            }
+            Product product = new()
+            {
+                Id = id,
+                PhotoUrl = productUpdateDto.PhotoUrl,
+                Categories = productUpdateDto.Categories,
+                CreatedDate = productUpdateDto.CreatedDate,
+                Discount = productUpdateDto.Discount,
+                Price = productUpdateDto.Price,
+                DiscountEndDate = productUpdateDto.DiscountEndDate,
+                IsActive = productUpdateDto.IsActive,
+                IsDeleted = productUpdateDto.IsDeleted,
+                ProductLanguages = productLanguages,
+                UpdatedDate = DateTime.Now
+            };
+            _productDal.Update(id, product);
+        }
+        public void ProductRemoveById(string id)
+        {
+            var result = _productDal.Get(id);
+            _productDal.Remove(result.Id);
+        }
 
+
+        #endregion
+
+        #region  Get
         public List<Product> GetProducts()
         {
             return _productDal.GetAll();
@@ -124,37 +164,6 @@ namespace MultiShop.Business.Concreate
             return productUpdate;
         }
 
-        public void UpdateProduct(string id, ProductUpdateDTO productUpdateDto)
-        {
-            List<ProductLanguage> productLanguages = new();
-            foreach (var productLang in productUpdateDto.ProductLanguages)
-            {
-                ProductLanguage productLanguage = new()
-                {
-                    LangCode = productLang.LangCode,
-                    Name = productLang.Name,
-                    Description = productLang.Description,
-                    SeoUrl = "lggjk"
-                };
-                productLanguages.Add(productLanguage);
-            }
-            Product product = new()
-            {
-                Id = id,
-                PhotoUrl = productUpdateDto.PhotoUrl,
-                Categories = productUpdateDto.Categories,
-                CreatedDate = productUpdateDto.CreatedDate,
-                Discount = productUpdateDto.Discount,
-                Price = productUpdateDto.Price,
-                DiscountEndDate = productUpdateDto.DiscountEndDate,
-                IsActive = productUpdateDto.IsActive,
-                IsDeleted = productUpdateDto.IsDeleted,
-                ProductLanguages = productLanguages,
-                UpdatedDate = DateTime.Now
-            };
-            _productDal.Update(id, product);
-        }
-
         public ProductRemove GetProductRemoveById(string id)
         {
             var product = _productDal.Get(id);
@@ -165,12 +174,6 @@ namespace MultiShop.Business.Concreate
                 ProductLanguage = product.ProductLanguages,
             };
             return productRemove;
-        }
-
-        public void ProductRemoveById(string id)
-        {
-            var result = _productDal.Get(id);
-            _productDal.Remove(result.Id);
         }
 
         public List<RecentProductDTO> RecentProductList(string langcide)
@@ -187,5 +190,10 @@ namespace MultiShop.Business.Concreate
         {
             return _productDal.GetProductDetail(id, langcide);
         }
+
+
+        #endregion
+
+
     }
 }

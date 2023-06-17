@@ -1,9 +1,11 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using MultiShop.Business.Abstract;
 using MultiShop.Business.AutoMapper;
 using MultiShop.Business.Concreate;
 using MultiShop.Core.DataAcces.MongoDB.MongoSettings;
+using MultiShop.Core.Entities.Concreate;
 using MultiShop.DataAcces.Abstract;
 using MultiShop.DataAcces.Concrete.EntityFramework;
 using MultiShop.DataAcces.Concrete.MongoDb;
@@ -23,11 +25,17 @@ builder.Services.AddScoped<ICategoryServices, CategoryManager>();
 builder.Services.AddScoped<ICategoryDal, MCategoryDal>();
 
 
+
+
 // Gelen Ders 
 builder.Services.AddScoped<IDatabseSettings, DatabaseSettings>(sp =>
 {
     return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
 });
+//todo AppDbContext => 
+builder.Services.AddDefaultIdentity<User>().AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>();
+
 
 
 var mapperConfig = new MapperConfiguration(mc =>
@@ -54,7 +62,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+
+///=>>>
+app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.UseEndpoints(endpoints =>
 {

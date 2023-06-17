@@ -17,12 +17,14 @@ namespace MultiShop.Business.Concreate
     public class CategoryManager : ICategoryServices
     {
         private readonly ICategoryDal _categoryDal;
-        private  readonly  IMapper _mapper;
+        private readonly IMapper _mapper;
         public CategoryManager(ICategoryDal categoryDal, IMapper mapper)
         {
             _categoryDal = categoryDal;
             _mapper = mapper;
         }
+
+        #region CRUD
 
         public void AddCategory(CategoryCreateDTO categoryCreateDto)
         {
@@ -45,74 +47,7 @@ namespace MultiShop.Business.Concreate
             _categoryDal.Add(category);
         }
 
-        public List<Category> GetCategory()
-        {
-            return _categoryDal.GetAll();
-
-        }
-
-        public List<CategoryListDTO> GetCategoryList(string lang)
-        {
-            var categories = _categoryDal.GetAll();
-
-            var result = categories.Select(x=> new CategoryListDTO
-            {
-                Id = x.Id,
-                PhotoUrl = x.PhotoUrl,
-                Name =  x.CategoryLanguages.FirstOrDefault(x=>x.LangCode == lang).Name,
-                SeoUrl = x.CategoryLanguages.FirstOrDefault(x => x.LangCode == lang).SeoUrl,
-                LangCode = x.CategoryLanguages.FirstOrDefault(x => x.LangCode == lang).LangCode,
-                ProductCount = 0
-
-            }).ToList();
-
-            return result;
-        }
-
-        public CategoryCreateDTO GetCategoryById(string id)
-        {
-            var category = _categoryDal.Get(id);
-
-            CategoryCreateDTO categoryCreateDto = new()
-            {
-                PhotoUrl = category.PhotoUrl,
-                CategoryLanguages = category.CategoryLanguages
-            };
-            
-            return categoryCreateDto;
-        }
-
-        public CategoryUpdateDTO GetUpdatedCategoryById(string id)
-        {
-            var category = _categoryDal.Get(id);
-
-            CategoryUpdateDTO categoryCreateDto = new()
-            {
-                Id = id,
-                PhotoUrl = category.PhotoUrl,
-                CategoryLanguages = category.CategoryLanguages
-            };
-
-            return categoryCreateDto;
-        }
-
-        public CategoryRemove GetRemoveCategoryById(string id)
-        {
-            var category = _categoryDal.Get(id);
-
-
-            CategoryRemove categoryCreateDto = new()
-            {
-                Id = id ,
-                PhotoUrl = category.PhotoUrl,
-                CategoryLanguages = category.CategoryLanguages,
-                
-            };
-
-            return categoryCreateDto;
-        }
-
-        public void UpdateCategory(string id,CategoryUpdateDTO updaCategoryDto)
+        public void UpdateCategory(string id, CategoryUpdateDTO updaCategoryDto)
         {
             List<CategoryLanguage> languages = new();
             foreach (var categoryLang in updaCategoryDto.CategoryLanguages)
@@ -138,11 +73,80 @@ namespace MultiShop.Business.Concreate
 
         public void RemoveCategory(string id)
         {
-             
-             _categoryDal.Remove(id);
+
+            _categoryDal.Remove(id);
+        }
+
+        #endregion
+
+        #region Get
+
+        public List<Category> GetCategory()
+        {
+            return _categoryDal.GetAll();
 
         }
 
+        public List<CategoryListDTO> GetCategoryList(string lang)
+        {
+            var categories = _categoryDal.GetAll();
+
+            var result = categories.Select(x => new CategoryListDTO
+            {
+                Id = x.Id,
+                PhotoUrl = x.PhotoUrl,
+                Name = x.CategoryLanguages.FirstOrDefault(x => x.LangCode == lang).Name,
+                SeoUrl = x.CategoryLanguages.FirstOrDefault(x => x.LangCode == lang).SeoUrl,
+                LangCode = x.CategoryLanguages.FirstOrDefault(x => x.LangCode == lang).LangCode,
+                ProductCount = 0
+
+            }).ToList();
+
+            return result;
+        }
+
+        public CategoryCreateDTO GetCategoryById(string id)
+        {
+            var category = _categoryDal.Get(id);
+
+            CategoryCreateDTO categoryCreateDto = new()
+            {
+                PhotoUrl = category.PhotoUrl,
+                CategoryLanguages = category.CategoryLanguages
+            };
+
+            return categoryCreateDto;
+        }
+
+        public CategoryUpdateDTO GetUpdatedCategoryById(string id)
+        {
+            var category = _categoryDal.Get(id);
+
+            CategoryUpdateDTO categoryCreateDto = new()
+            {
+                Id = id,
+                PhotoUrl = category.PhotoUrl,
+                CategoryLanguages = category.CategoryLanguages
+            };
+
+            return categoryCreateDto;
+        }
+
+        public CategoryRemove GetRemoveCategoryById(string id)
+        {
+            var category = _categoryDal.Get(id);
+
+
+            CategoryRemove categoryCreateDto = new()
+            {
+                Id = id,
+                PhotoUrl = category.PhotoUrl,
+                CategoryLanguages = category.CategoryLanguages,
+
+            };
+
+            return categoryCreateDto;
+        }
         public CategoryDetailDTO GetDetailById(string id)
         {
             var detail = _categoryDal.Get(id);
@@ -168,24 +172,30 @@ namespace MultiShop.Business.Concreate
 
         }
 
-   
 
-        public List<CategoryListDTO>  GetCategoriesByLanguage(string lang)
+
+        public List<CategoryListDTO> GetCategoriesByLanguage(string lang)
         {
             var categories = _categoryDal.GetAll();
 
             var result = categories.Select(x => new CategoryListDTO
             {
-                Id = x.Id, 
+                Id = x.Id,
                 Name = x.CategoryLanguages.FirstOrDefault(z => z.LangCode == lang).Name,
                 LangCode = lang,
                 PhotoUrl = x.PhotoUrl,
                 SeoUrl = x.CategoryLanguages.FirstOrDefault(z => z.LangCode == lang).SeoUrl,
                 ProductCount = 0
             }).ToList();
-             
+
             return result;
 
         }
+        #endregion
+
+
     }
+
+
 }
+
