@@ -11,6 +11,8 @@ namespace MultiShop.Core.Entities.Concreate
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhotoUrl { get; set; }
+        public string UserToken { get; set; }
+
         public DateTime BirthDay { get; set; }
 
     }

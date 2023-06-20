@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Core.Entities.Concreate;
+using MultiShop.Core.Helpers;
 using MultiShop.Entities.DTOs.UserDTOs;
 
 namespace MultiShop.WebUI.Controllers
@@ -11,15 +12,16 @@ namespace MultiShop.WebUI.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
 
-        public AuthController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AuthController(UserManager<User> userManager, SignInManager<User> signInManager )
         {
             _userManager = userManager;
             _signInManager = signInManager;
+          
         }
 
         public IActionResult Login()
         {
-            
+
             return View();
         }
 
@@ -75,7 +77,7 @@ namespace MultiShop.WebUI.Controllers
             {
                 return View();
             }
-
+            var userToken = Guid.NewGuid().ToString();
             User newUser = new()
             {
                 UserName = registerDTO.Email,
@@ -83,17 +85,41 @@ namespace MultiShop.WebUI.Controllers
                 LastName = registerDTO.LastName,
                 Email = registerDTO.Email,
                 PhotoUrl = "/uploads/avatar.png",
-                BirthDay = DateTime.Now
+                BirthDay = DateTime.Now,
+                UserToken = userToken
             };
             var result = await _userManager.CreateAsync(newUser, registerDTO.Password);
             if (result.Succeeded)
             {
+                //EmaillHelper _emaillHelper = new EmaillHelper();
+                //_emaillHelper.SendConfirmationEmail(newUser.Email , newUser.UserToken , newUser.FirstName , newUser.LastName);
+                
+
                 return View(nameof(Login));
             }
             else
             {
                 return View(registerDTO);
             }
+
+
         }
+
+        public async Task<IActionResult> ConfirmEmail(string token, string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user.UserToken == token)
+            {
+                user.EmailConfirmed = true;
+                await _userManager.UpdateAsync(user);
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+
     }
 }

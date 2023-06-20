@@ -43,8 +43,15 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <button class="dropdown-item" type="button">Sign in</button>
-                            <button class="dropdown-item" type="button">Sign up</button>
+                         @if (User.Identity.IsAuthenticated)
+                         {
+                             @await  Component.InvokeAsync("Auth")
+                         }
+                         else
+                         {
+                             <a href="/auth/login" class="dropdown-item" type="button">Sign in</a>
+                             <a href="/auth/register" class="dropdown-item" type="button">Sign up</a>
+                         }
                         </div>
                     </div>
                     <div class="btn-group mx-2">
