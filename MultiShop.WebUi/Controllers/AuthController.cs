@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Core.Entities.Concreate;
 using MultiShop.Entities.DTOs.UserDTOs;
@@ -18,6 +19,7 @@ namespace MultiShop.WebUI.Controllers
 
         public IActionResult Login()
         {
+            
             return View();
         }
 

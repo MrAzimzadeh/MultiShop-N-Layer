@@ -27,12 +27,18 @@ builder.Services.AddScoped<ICategoryDal, MCategoryDal>();
 
 
 
+
+
 // Gelen Ders 
 builder.Services.AddScoped<IDatabseSettings, DatabaseSettings>(sp =>
 {
     return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
 });
 //todo AppDbContext => 
+
+builder.Services.AddScoped<AppDbContext>();
+
+
 builder.Services.AddDefaultIdentity<User>().AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 

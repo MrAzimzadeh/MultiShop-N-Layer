@@ -18,5 +18,6 @@ namespace MultiShop.Core.DataAcces
         void Delete(TEntity model); // 
         TEntity Get(Expression<Func<TEntity, bool>> filter); //
         List<TEntity> GetAll(Expression<Func<TEntity, bool>>? filter = null); // 
+    
     }
 }
