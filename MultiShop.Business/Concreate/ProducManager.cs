@@ -7,6 +7,7 @@ using MultiShop.Business.Abstract;
 using MultiShop.DataAcces.Abstract;
 using MultiShop.DataAcces.Concrete.MongoDb;
 using MultiShop.Entities.Concreate;
+using MultiShop.Entities.DTOs.CartDTO;
 using MultiShop.Entities.DTOs.Category;
 using MultiShop.Entities.DTOs.ProductDTOs;
 
@@ -184,6 +185,30 @@ namespace MultiShop.Business.Concreate
         public List<DiscountProductDTO> discountProduct(string langcide)
         {
             return _productDal.DiscountProduct(langcide);
+        }
+
+        public List<CartProductDTO> GetProductsById(string langcode, List<string> id, List<int> quantity)
+        {
+            var products = _productDal.GetProductByLanguage(langcode);
+
+            List<CartProductDTO> result = new();
+
+
+            for (int i = 0; i < id.Count; i++)
+            {
+                var findProduct = products.FirstOrDefault(x => x.Id == id[i]);
+                CartProductDTO cartProductDTO = new()
+                {
+                    Id = findProduct.Id,
+                    Name = findProduct.Name,
+                    Price = findProduct.Price,
+                    Quantity = quantity[i],
+                    PhotoUrl = findProduct.PhotoUrl[0]
+                };
+
+                result.Add(cartProductDTO);
+            }
+            return result;
         }
 
         public ProductDetail GetDetailByIdLangCode(string id, string langcide)

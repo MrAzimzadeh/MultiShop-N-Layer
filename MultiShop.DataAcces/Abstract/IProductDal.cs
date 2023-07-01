@@ -18,6 +18,10 @@ namespace MultiShop.DataAcces.Abstract
         List<RecentProductDTO> RecentProduct(string langcide);
         List<DiscountProductDTO> DiscountProduct(string langcide);
         ProductDetail GetProductDetail(string id , string lang);
+
+
+        //
+
     }
 
 }

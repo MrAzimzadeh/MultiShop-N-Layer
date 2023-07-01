@@ -2249,11 +2249,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Entities\\MultiShop.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Entities\\MultiShop.Entities.csproj",
       "projectName": "MultiShop.Entities",
-      "projectPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Entities\\MultiShop.Entities.csproj",
+      "projectPath": "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Entities\\MultiShop.Entities.csproj",
       "packagesPath": "C:\\Users\\azimz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Entities\\obj\\",
+      "outputPath": "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2268,15 +2268,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Core\\MultiShop.Core.csproj": {
-              "projectPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Core\\MultiShop.Core.csproj"
+            "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Core\\MultiShop.Core.csproj": {
+              "projectPath": "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Core\\MultiShop.Core.csproj"
             }
           }
         }
@@ -2312,7 +2311,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
       }
     }
   }

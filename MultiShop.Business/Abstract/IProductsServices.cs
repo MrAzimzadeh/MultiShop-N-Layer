@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver.Core.Misc;
 using MultiShop.Entities.Concreate;
+using MultiShop.Entities.DTOs.CartDTO;
 using MultiShop.Entities.DTOs.Category;
 using MultiShop.Entities.DTOs.ProductDTOs;
 
@@ -43,7 +44,8 @@ namespace MultiShop.Business.Abstract
 
 
 
-
+        //
+        List<CartProductDTO> GetProductsById(string langcode, List<string> id, List<int> quantity);
 
 
     }

@@ -93,16 +93,13 @@ namespace MultiShop.WebUI.Controllers
             {
                 //EmaillHelper _emaillHelper = new EmaillHelper();
                 //_emaillHelper.SendConfirmationEmail(newUser.Email , newUser.UserToken , newUser.FirstName , newUser.LastName);
-                
-
                 return View(nameof(Login));
             }
             else
             {
+               ModelState.AddModelError("Error" , registerDTO.ToString());
                 return View(registerDTO);
             }
-
-
         }
 
         public async Task<IActionResult> ConfirmEmail(string token, string email)
@@ -120,6 +117,12 @@ namespace MultiShop.WebUI.Controllers
             }
         }
 
-
+        [HttpPost]
+        [Authorize]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Login", "Auth");
+        }
     }
 }

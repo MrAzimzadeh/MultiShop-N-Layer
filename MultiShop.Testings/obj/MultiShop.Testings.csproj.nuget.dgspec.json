@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj": {}
+    "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj": {}
   },
   "projects": {
-    "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj": {
+    "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj",
+        "projectUniqueName": "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj",
         "projectName": "MultiShop.Testings",
-        "projectPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj",
+        "projectPath": "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Testings\\MultiShop.Testings.csproj",
         "packagesPath": "C:\\Users\\azimz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Testings\\obj\\",
+        "outputPath": "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Testings\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     }

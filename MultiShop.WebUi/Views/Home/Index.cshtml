@@ -1,7 +1,9 @@
 ﻿@model HomeVM
 
+@{
+    ViewData["Title"] = "Home Page";
+}
 
-<!-- Navbar End -->
 <!-- Carousel Start -->
 <div class="container-fluid mb-3">
     <div class="row px-xl-5">
@@ -14,7 +16,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item position-relative active" style="height: 430px;">
-                        <img class="position-absolute w-100 h-100" src="~/Home/img/carousel-1.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="~/vendors/img/carousel-1.jpg" style="object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Men Fashion</h1>
@@ -24,7 +26,7 @@
                         </div>
                     </div>
                     <div class="carousel-item position-relative" style="height: 430px;">
-                        <img class="position-absolute w-100 h-100" src="~/Home/img/carousel-2.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="~/vendors/img/carousel-2.jpg" style="object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Women Fashion</h1>
@@ -34,7 +36,7 @@
                         </div>
                     </div>
                     <div class="carousel-item position-relative" style="height: 430px;">
-                        <img class="position-absolute w-100 h-100" src="~/Home/img/carousel-3.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="~/vendors/img/carousel-3.jpg" style="object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Kids Fashion</h1>
@@ -48,7 +50,7 @@
         </div>
         <div class="col-lg-4">
             <div class="product-offer mb-30" style="height: 200px;">
-                <img class="img-fluid" src="~/Home/img/offer-1.jpg" alt="">
+                <img class="img-fluid" src="~/vendors/img/offer-1.jpg" alt="">
                 <div class="offer-text">
                     <h6 class="text-white text-uppercase">Save 20%</h6>
                     <h3 class="text-white mb-3">Special Offer</h3>
@@ -56,7 +58,7 @@
                 </div>
             </div>
             <div class="product-offer mb-30" style="height: 200px;">
-                <img class="img-fluid" src="~/Home/img/offer-2.jpg" alt="">
+                <img class="img-fluid" src="~/vendors/img/offer-2.jpg" alt="">
                 <div class="offer-text">
                     <h6 class="text-white text-uppercase">Save 20%</h6>
                     <h3 class="text-white mb-3">Special Offer</h3>
@@ -101,19 +103,18 @@
 <div class="container-fluid pt-5">
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Categories</span></h2>
     <div class="row px-xl-5 pb-3">
-
-
-        @foreach (var cat in Model.CategoryList)
+        @foreach (var category in Model.CategoryList)
         {
+
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-                <a class="text-decoration-none" href="">
+                <a class="text-decoration-none" href="/product/index/@category.SeoUrl">
                     <div class="cat-item d-flex align-items-center mb-4">
                         <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                            <img class="img-fluid" src="@cat.PhotoUrl" alt="">
+                            <img class="img-fluid" src="@category.PhotoUrl" alt="">
                         </div>
                         <div class="flex-fill pl-3">
-                            <h6>@cat.Name</h6>
-                            <small class="text-body">@cat.ProductCount Products</small>
+                            <h6>@category.Name</h6>
+                            <small class="text-body">@category.ProductCount Products</small>
                         </div>
                     </div>
                 </a>
@@ -127,23 +128,95 @@
 <div class="container-fluid pt-5 pb-3">
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Featured Products</span></h2>
     <div class="row px-xl-5">
-        @foreach (var discountProduct in Model.DiscountProductDtos)
+        @foreach (var product in Model.DiscountProductDtos)
         {
             <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
                 <div class="product-item bg-light mb-4">
                     <div class="product-img position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="@discountProduct.PhotoUrl" alt="">
+                        <img class="img-fluid w-100" src="@product.PhotoUrl[0]" alt="">
                         <div class="product-action">
-                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a onclick="alert('@product.Id')" class="btn btn-outline-dark btn-square"><i class="fa fa-shopping-cart"></i></a>
                             <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
                             <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
                             <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
                         </div>
                     </div>
                     <div class="text-center py-4">
-                        <a class="h6 text-decoration-none text-truncate" href="/product/detail/@discountProduct.Id">@discountProduct.Name.Substring(0 ,3)</a>
+                        <a class="h6 text-decoration-none text-truncate" href="/product/detail/@product.Id">@product.Name</a>
                         <div class="d-flex align-items-center justify-content-center mt-2">
-                            <h5>₼@discountProduct.Discount</h5><h6 class="text-muted ml-2"><del>₼@discountProduct.Price</del></h6>
+                            <h5>@product.Discount ₼</h5><h6 class="text-muted ml-2"><del>@product.Price ₼</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+<!-- Products End -->
+<!-- Offer Start -->
+<div class="container-fluid pt-5 pb-3">
+    <div class="row px-xl-5">
+        <div class="col-md-6">
+            <div class="product-offer mb-30" style="height: 300px;">
+                <img class="img-fluid" src="~/vendors/img/offer-1.jpg" alt="">
+                <div class="offer-text">
+                    <h6 class="text-white text-uppercase">Save 20%</h6>
+                    <h3 class="text-white mb-3">Special Offer</h3>
+                    <a href="" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="product-offer mb-30" style="height: 300px;">
+                <img class="img-fluid" src="~/vendors/img/offer-2.jpg" alt="">
+                <div class="offer-text">
+                    <h6 class="text-white text-uppercase">Save 20%</h6>
+                    <h3 class="text-white mb-3">Special Offer</h3>
+                    <a href="" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Offer End -->
+<!-- Products Start -->
+<div class="container-fluid pt-5 pb-3">
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Recent Products</span></h2>
+    <div class="row px-xl-5">
+        @foreach (var item in Model.RecentProductDtos)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img style="width: 100%" height="400" src="@item.PhotoUrl[0]" alt="">
+                        <div class="product-action">
+                            <a onclick="AddToCart('@item.Id')" class="btn btn-outline-dark btn-square" ><i class="fa fa-shopping-cart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="/product/detail/@item.Id">@item.Name</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            @if (item.Discount > 0)
+                            {
+                                <h5>@item.Discount ₼</h5><h6 class="text-muted ml-2"><del>@item.Price ₼</del></h6>
+                            }
+                            else
+                            {
+                                <h5>@item.Price ₼</h5>
+
+                            }
                         </div>
                         <div class="d-flex align-items-center justify-content-center mb-1">
                             <small class="fa fa-star text-primary mr-1"></small>
@@ -160,113 +233,106 @@
     </div>
 </div>
 <!-- Products End -->
-<!-- Offer Start -->
-<div class="container-fluid pt-5 pb-3">
-    <div class="row px-xl-5">
-        <div class="col-md-6">
-            <div class="product-offer mb-30" style="height: 300px;">
-                <img class="img-fluid" src="~/Home/img/offer-1.jpg" alt="">
-                <div class="offer-text">
-                    <h6 class="text-white text-uppercase">Save 20%</h6>
-                    <h3 class="text-white mb-3">Special Offer</h3>
-                    <a href="" class="btn btn-primary">Shop Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="product-offer mb-30" style="height: 300px;">
-                <img class="img-fluid" src="~/Home/img/offer-2.jpg" alt="">
-                <div class="offer-text">
-                    <h6 class="text-white text-uppercase">Save 20%</h6>
-                    <h3 class="text-white mb-3">Special Offer</h3>
-                    <a href="" class="btn btn-primary">Shop Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Offer End -->
-<!-- Products Start -->
-<div class="container-fluid pt-5 pb-3">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Recent Products</span></h2>
-    <div class="row px-xl-5">
-        @foreach (var recentProduct in Model.RecentProductDtos)
-        {
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="@recentProduct.PhotoUrl" alt="">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="/product/detail/@recentProduct.Id">@recentProduct.Name.Substring(0,3)</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                       
-                            @if (@recentProduct.Discount > 0)
-                            {
-                                <h5>₼@recentProduct.Discount.ToString() </h5>
-                                <h6 class="text-muted ml-2"><del>₼@recentProduct.Price.ToString()</del></h6>
-                            }
-                            else
-                            {
-                                <h6 class="text-muted ml-2">₼@recentProduct.Price</h6>
-                            }
-                            
-                      
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-1">
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small>(99)</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        }
-
-    </div>
-</div>
-<!-- Products End -->
 <!-- Vendor Start -->
 <div class="container-fluid py-5">
     <div class="row px-xl-5">
         <div class="col">
             <div class="owl-carousel vendor-carousel">
                 <div class="bg-light p-4">
-                    <img src="~/Home/img/vendor-1.jpg" alt="">
+                    <img src="~/vendors/img/vendor-1.jpg" alt="">
                 </div>
                 <div class="bg-light p-4">
-                    <img src="~/Home/img/vendor-2.jpg" alt="">
+                    <img src="~/vendors/img/vendor-2.jpg" alt="">
                 </div>
                 <div class="bg-light p-4">
-                    <img src="~/Home/img/vendor-3.jpg" alt="">
+                    <img src="~/vendors/img/vendor-3.jpg" alt="">
                 </div>
                 <div class="bg-light p-4">
-                    <img src="~/Home/img/vendor-4.jpg" alt="">
+                    <img src="~/vendors/img/vendor-4.jpg" alt="">
                 </div>
                 <div class="bg-light p-4">
-                    <img src="~/Home/img/vendor-5.jpg" alt="">
+                    <img src="~/vendors/img/vendor-5.jpg" alt="">
                 </div>
                 <div class="bg-light p-4">
-                    <img src="~/Home/img/vendor-6.jpg" alt="">
+                    <img src="~/vendors/img/vendor-6.jpg" alt="">
                 </div>
                 <div class="bg-light p-4">
-                    <img src="~/Home/img/vendor-7.jpg" alt="">
+                    <img src="~/vendors/img/vendor-7.jpg" alt="">
                 </div>
                 <div class="bg-light p-4">
-                    <img src="~/Home/img/vendor-8.jpg" alt="">
+                    <img src="~/vendors/img/vendor-8.jpg" alt="">
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Vendor End -->
+
+
+
+@section Scripts{
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        //function getCookie(name) {
+        //    const value = `; ${document.cookie}`;
+        //    const parts = value.split(`; ${name}=`);
+        //    if (parts.length === 2) return parts.pop().split(';').shift();
+        //}
+        //if (getCookie("products") == null) {
+        //    document.cookie = "products=" + JSON.stringify([]) + ";secure;"
+
+        //}
+
+
+
+        function AddToCart(Id) {
+          
+            let Quantity = 1;
+            let cartItem = { Id, Quantity };
+
+
+
+            $.ajax({
+                type: "GET",
+                url: "/cart/addtocart",
+                data: cartItem,
+                success: function (e) {
+                    console.log(e)
+                    if (e == "Ok") {
+                        Swal.fire(
+                            'Səbətə əlavə olundu!',
+                            '',
+                            'success'
+                        )
+                    }
+                }
+            })
+
+        //    let currentCookie = JSON.parse(getCookie("products"));
+
+        //    let findProduct = currentCookie.length != 0 ? currentCookie.filter(x => x.id == id) : []
+
+        //    if (findProduct.length != 0) {
+        //        currentCookie.filter(x => x.id == id).map(data => {
+        //            data.quantity += 1;
+        //        })
+        //        document.cookie = "products=" + JSON.stringify(currentCookie) + ";secure ;"
+        //    } else {
+        //        document.cookie = "products=" + JSON.stringify([...currentCookie, cartItem]) + ";secure;"
+        //    }
+        //    Swal.fire(
+        //        'Səbətə əlavə olundu!',
+        //        '',
+        //        'success'
+        //    )
+        }
+    </script>
+
+
+
+
+
+
+}
