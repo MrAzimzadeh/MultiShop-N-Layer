@@ -84,7 +84,7 @@ namespace MultiShop.WebUI.Controllers
             Response.Cookies.Delete("products");
             return RedirectToAction("Index");
         }
-
+        
         public JsonResult AddToCart(string Id, int Quantity)
         {
             var cookieOptions = new CookieOptions();
