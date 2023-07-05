@@ -23,5 +23,7 @@ namespace MultiShop.Business.Abstract
         // Detail 
         CategoryDetailDTO GetDetailById(string id);
         List<CategoryListDTO> GetCategoriesByLanguage(string lang);
+ 
+        
     }
 }

@@ -211,6 +211,16 @@ namespace MultiShop.Business.Concreate
             return result;
         }
 
+        public List<RecentProductDTO> GetAllFilteredProductList(string langcode, decimal? minPrice, decimal? maxPrice, string? categoryId, bool IsDiscounted, int page = 0)
+        {
+            return _productDal.FilterProducts(langcode, minPrice, maxPrice, categoryId, IsDiscounted,page);
+        }
+
+        public List<DiscountProductDTO> DiscountProductList(string langcode)
+        {
+            throw new NotImplementedException();
+        }
+
         public ProductDetail GetDetailByIdLangCode(string id, string langcide)
         {
             return _productDal.GetProductDetail(id, langcide);

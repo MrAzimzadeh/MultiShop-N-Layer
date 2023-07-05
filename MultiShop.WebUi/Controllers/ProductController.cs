@@ -25,6 +25,7 @@ namespace MultiShop.WebUi.Controllers
         {
             return View();
         }
+
         public IActionResult Detail(string id)
         {
             var detailProduct = _productSercice.GetDetailByIdLangCode(id, "Az");

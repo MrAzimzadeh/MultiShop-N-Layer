@@ -1,5 +1,4 @@
-﻿
-using System.Text.Json;
+﻿using System.Text.Json;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MultiShop.Business.Abstract;
@@ -18,7 +17,8 @@ namespace MultiShop.WebUI.Controllers
         private readonly UserManager<User> _userManager;
         private readonly IOrderService _orderService;
 
-        public CartController(IProductsServices productService, IHttpContextAccessor httpContext, UserManager<User> userManager, IOrderService orderService)
+        public CartController(IProductsServices productService, IHttpContextAccessor httpContext,
+            UserManager<User> userManager, IOrderService orderService)
         {
             _productService = productService;
             _httpContext = httpContext;
@@ -40,7 +40,6 @@ namespace MultiShop.WebUI.Controllers
             }
 
             return View();
-
         }
 
         public async Task<IActionResult> CheckOut()
@@ -78,13 +77,14 @@ namespace MultiShop.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> CheckOut(OrderItemDTO orderItem)
         {
-            orderItem.UserId = _httpContext.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value;
+            orderItem.UserId = _httpContext.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)
+                .Value;
 
             _orderService.OrderProduct(orderItem);
             Response.Cookies.Delete("products");
             return RedirectToAction("Index");
         }
-        
+
         public JsonResult AddToCart(string Id, int Quantity)
         {
             var cookieOptions = new CookieOptions();
@@ -120,11 +120,9 @@ namespace MultiShop.WebUI.Controllers
 
                 var updatedDate = JsonSerializer.Serialize<List<CartItemDTO>>(datas);
                 Response.Cookies.Append("products", updatedDate, cookieOptions);
-
             }
+
             return Json("Ok");
         }
-
-       
     }
 }

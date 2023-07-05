@@ -38,7 +38,7 @@ namespace MultiShop.Business.Abstract
         ProductRemove  GetProductRemoveById(string id);
         
         void ProductRemoveById(string id);
-        // Home 
+        // Home  
         List<RecentProductDTO> RecentProductList(string langcide);
         List<DiscountProductDTO> discountProduct(string langcide);
 
@@ -47,6 +47,9 @@ namespace MultiShop.Business.Abstract
         //
         List<CartProductDTO> GetProductsById(string langcode, List<string> id, List<int> quantity);
 
-
+        List<RecentProductDTO> GetAllFilteredProductList(string langcode, decimal? minPrice, decimal? maxPrice, string? categoryId, bool IsDiscounted, int page=0);
+        List<DiscountProductDTO> DiscountProductList(string langcode);
+        
+        
     }
 }

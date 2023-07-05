@@ -126,7 +126,6 @@ namespace MultiShop.WebUI.Areas.Dashboard.Controllers
                     {
                         photo[i].CopyTo(fileStream);
                     }
-
                     photos.Add(path);
                 }
                 product.PhotoUrl = photos;
