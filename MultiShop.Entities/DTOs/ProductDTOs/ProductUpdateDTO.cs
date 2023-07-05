@@ -1,5 +1,4 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
+﻿
 using MultiShop.Entities.Concreate;
 using System;
 using System.Collections.Generic;
@@ -13,10 +12,9 @@ namespace MultiShop.Entities.DTOs.ProductDTOs
     public class ProductUpdateDTO
     {
         public string Id { get; set; }
-
         [Required]
         public List<ProductLanguage> ProductLanguages { get; set; }
-        
+
         public List<string> PhotoUrl { get; set; }
         [Required]
         public decimal Price { get; set; }

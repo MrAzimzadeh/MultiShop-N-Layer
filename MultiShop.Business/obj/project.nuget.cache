@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z5pM2bDXcUGThz9bkQq4rTG8CUfymlLo4LsRSc6jtiy/pMjqL7qrbw+eGYRHtxFO30TxJrdCj8pD+xu4RJ59LA==",
+  "dgSpecHash": "mHZEd/kEh9uYoKOdKYE/TeNSakvS4F2DqRtRe3CVLK4LFpgw4xG2HLph2YIV6ZE6bWyuQLmAiA4jm33OtHvcSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\azimz\\OneDrive\\Masaüstü\\ComparAcademy\\ComparAcademy\\K101NewG\\MultiShop\\MultiShop.Business\\MultiShop.Business.csproj",
+  "projectFilePath": "C:\\Users\\azimz\\Desktop\\MultiShop\\MultiShop\\MultiShop.Business\\MultiShop.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\azimz\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\azimz\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

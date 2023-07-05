@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver.Core.Misc;
 using MultiShop.Entities.Concreate;
+using MultiShop.Entities.DTOs.CartDTO;
 using MultiShop.Entities.DTOs.Category;
 using MultiShop.Entities.DTOs.ProductDTOs;
 
@@ -37,14 +38,18 @@ namespace MultiShop.Business.Abstract
         ProductRemove  GetProductRemoveById(string id);
         
         void ProductRemoveById(string id);
-        // Home 
+        // Home  
         List<RecentProductDTO> RecentProductList(string langcide);
         List<DiscountProductDTO> discountProduct(string langcide);
 
 
 
+        //
+        List<CartProductDTO> GetProductsById(string langcode, List<string> id, List<int> quantity);
 
-
-
+        List<RecentProductDTO> GetAllFilteredProductList(string langcode, decimal? minPrice, decimal? maxPrice, string? categoryId, bool IsDiscounted, int page=0);
+        List<DiscountProductDTO> DiscountProductList(string langcode);
+        
+        
     }
 }

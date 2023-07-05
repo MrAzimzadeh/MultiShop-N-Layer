@@ -14,7 +14,7 @@ namespace MultiShop.DataAcces.Concrete.EntityFramework
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer
-            ("Server=127.0.0.1,1433;Database=MultiShopEFDB; User Id=SA; Password=Mahammad123456; TrustServerCertificate=True;");
+            ("Server=127.0.0.1,1433;Database=MultiShopEFDB; User Id=sa; Password=Password@12345; TrustServerCertificate=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
