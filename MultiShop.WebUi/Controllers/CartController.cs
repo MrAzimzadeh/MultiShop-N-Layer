@@ -87,7 +87,7 @@ namespace MultiShop.WebUI.Controllers
 
         public JsonResult AddToCart(string Id, int Quantity)
         {
-            var cookieOptions = new CookieOptions();
+              var cookieOptions = new CookieOptions();
             cookieOptions.Expires = DateTime.Now.AddDays(1);
             cookieOptions.Path = "/";
             CartItemDTO cartItemDTO = new()
