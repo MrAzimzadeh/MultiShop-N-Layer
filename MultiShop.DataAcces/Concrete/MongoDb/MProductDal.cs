@@ -111,5 +111,35 @@ namespace MultiShop.DataAcces.Concrete.MongoDb
             //}).FirstOrDefault();
             return detail;
         }
+
+        public List<RecentProductDTO> FilterProducts(string langcode, decimal? minPrice, decimal? maxPrice, string? categoryId, bool IsDiscounted, int page)
+        {
+            var product = _collection.Find(FilterDefinition<Product>.Empty).ToList();
+            var result = product.Select(x => new RecentProductDTO
+            {
+                Id = x.Id,
+                Discount = x.Discount,
+                Name = x.ProductLanguages.FirstOrDefault(z => z.LangCode == langcode).Name,
+                PhotoUrl = x.PhotoUrl[0],
+                Price = x.Price,
+                IsActive = x.IsActive,
+                IsDeleted = x.IsDeleted,
+                Categories = x.Categories
+            }).Skip(page).Take(10).OrderByDescending(x => x.Id).ToList();
+            minPrice = minPrice == null ? 0 : minPrice;
+            maxPrice = maxPrice == null ? result.OrderByDescending(x => x.Price).First().Price : maxPrice;
+            var skipFilter = page;
+
+            var test = result.FirstOrDefault().Categories;
+
+            if (categoryId == null)
+            {
+                return result.Where(x => x.Price > minPrice && x.Price <= maxPrice).ToList();
+
+            }
+            var filter = result.Where(x => x.Price > minPrice && x.Price < maxPrice && x.Categories.Contains(categoryId)).ToList();
+            return filter;
+
+        }
     }
 }

@@ -32,6 +32,17 @@ namespace MultiShop.DataAcces.Concrete.MongoDb
             }).Select(x => x.ToString()).ToList();
             return result;
         }
+
+        public List<string> GetCategoriesById(string langcode, List<string> categoryId)
+        {
+            var categories = _collection.Find(FilterDefinition<Category>.Empty).ToList();
+
+            var result = categories.Where(x => categoryId.Contains(x.Id)).Select(x => new
+            {
+                x.Id
+            }).Select(x => x.ToString()).ToList();
+            return result;
+        }
     }
 
 }

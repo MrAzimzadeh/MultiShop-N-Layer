@@ -1,2 +1,5 @@
 ﻿@model MultiShop.Core.Entities.Concreate.User
 <a class="dropdown-item" type="button">@Model.FirstName  @Model.LastName</a>
+<form method="post" asp-controller="Auth" asp-action="Logout" >
+    <input type="submit" class="dropdown-item" placeholder="Log Out" value="Log out " />
+</form>

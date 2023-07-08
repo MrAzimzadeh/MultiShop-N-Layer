@@ -26,6 +26,9 @@ builder.Services.AddScoped<ICategoryServices, CategoryManager>();
 builder.Services.AddScoped<ICategoryDal, MCategoryDal>();
 
 
+//Order
+builder.Services.AddScoped<IOrderDal, EfOrderDal>();
+builder.Services.AddScoped<IOrderService, OrderManager>();
 
 
 
